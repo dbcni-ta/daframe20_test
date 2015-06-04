@@ -1,0 +1,20 @@
+$caption.add("코드",4)
+$caption.add("국가명",15)
+$caption.add("대륙명",8)
+$caption.add("수도명",8)
+
+SELECT 
+    CODE, 
+    NAME, 
+    CONTINENT, 
+    CAPITAL
+FROM 
+    EX_NATION
+ORDER BY CODE
+#*
+WHERE  
+    CODE = $input.CODE AND 
+    NAME = $input.NAME AND 
+    CONTINENT = $input.CONTINENT AND 
+    CAPITAL = $input.CAPITAL 
+*#

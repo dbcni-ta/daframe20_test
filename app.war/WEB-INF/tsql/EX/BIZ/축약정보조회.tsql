@@ -1,0 +1,8 @@
+#* 
+
+조회 테스트 쿼리
+
+*#
+
+SELECT id, name, age FROM EX_BIZ_INFO
+WHERE NAME=$input.name AND age > $input.age 

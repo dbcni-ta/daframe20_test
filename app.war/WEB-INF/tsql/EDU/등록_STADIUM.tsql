@@ -1,0 +1,16 @@
+INSERT INTO EX_STADIUM 
+(
+    CODE, 
+    NATION_CODE, 
+    NAME, 
+    SEATS, 
+    ADDRESS
+) 
+VALUES
+(
+    $input.CODE, 
+    $input.NATION_CODE, 
+    $input.NAME, 
+    $input.SEATS, 
+    $input.ADDRESS
+)

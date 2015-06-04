@@ -1,0 +1,441 @@
+#if ($system.dbName == "Oracle" || $system.dbName == "Tibero") 
+DROP TABLE ex_nation::
+DROP TABLE ex_stadium::
+
+CREATE TABLE ex_nation (
+code VARCHAR2(3) PRIMARY KEY,
+name VARCHAR2(40) NOT NULL,
+continent VARCHAR2(10),
+capital VARCHAR2(30)
+)::
+
+CREATE TABLE ex_stadium(
+code NUMBER(5) PRIMARY KEY,
+nation_code CHAR(3) NOT NULL,
+name VARCHAR2(50) NOT NULL,
+area NUMBER(10,2),
+seats NUMBER(10),
+address VARCHAR2(100)
+)::
+
+#elseif ($system.dbName == "SQLServer" || $system.dbName == "MySQL" || $system.dbName == "Altibase") 
+DROP TABLE ex_nation::
+DROP TABLE ex_stadium::
+
+CREATE TABLE ex_nation (
+code VARCHAR(3) PRIMARY KEY,
+name VARCHAR(40) NOT NULL,
+continent VARCHAR(10),
+capital VARCHAR(30)
+)::
+
+CREATE TABLE ex_stadium(
+code DECIMAL(5,0)  NOT NULL PRIMARY KEY,
+nation_code CHAR(3) NOT NULL,
+name VARCHAR(50) NOT NULL,
+area DECIMAL(10,2),
+seats DECIMAL(10),
+address VARCHAR(100)
+)::
+
+#elseif ($system.dbName == "Cubrid" || $system.dbName == "PostgreSQL") 
+DROP TABLE IF EXISTS ex_nation::
+DROP TABLE IF EXISTS ex_stadium::
+
+CREATE TABLE ex_nation (
+code character varying(3) PRIMARY KEY,
+name character varying(40) NOT NULL,
+continent character varying(10),
+capital character varying(30)
+)::
+
+CREATE TABLE ex_stadium(
+code integer PRIMARY KEY,
+nation_code character(3) NOT NULL,
+name character varying(50) NOT NULL,
+area numeric(10,2),
+seats integer,
+address character varying(100)
+)::
+
+#elseif ($system.dbName == "DB2") 
+
+DROP TABLE ex_nation::
+DROP TABLE ex_stadium::
+
+CREATE TABLE ex_nation (
+code CHAR(3) NOT NULL PRIMARY KEY,
+name VARCHAR(40) NOT NULL,
+continent VARCHAR(10),
+capital VARCHAR(30)
+)::
+
+CREATE TABLE ex_stadium(
+code DECIMAL(5,0)  NOT NULL PRIMARY KEY,
+nation_code CHAR(3) NOT NULL,
+name VARCHAR(50) NOT NULL,
+area DECIMAL(10,2),
+seats DECIMAL(10),
+address VARCHAR(100)
+)::
+
+#end
+
+insert into ex_nation (code, name, continent, capital) values ('SRB', 'Serbia', 'Europe', 'Beograd')::
+insert into ex_nation (code, name, continent, capital) values ('KIR', 'Kiribati', 'Oceania', 'Tarawa')::
+insert into ex_nation (code, name, continent, capital) values ('SCG', 'Serbia and Montenegro', 'Europe', 'Beograd')::
+insert into ex_nation (code, name, continent, capital) values ('TLS', 'Timor-Leste', 'Asia', 'Dili')::
+insert into ex_nation (code, name, continent, capital) values ('ZIM', 'Zimbabwe', 'Africa', 'Harare')::
+insert into ex_nation (code, name, continent, capital) values ('ZAM', 'Zambia', 'Africa', 'Lusaka')::
+insert into ex_nation (code, name, continent, capital) values ('ZAI', 'Zaire', 'Africa', 'Kinshasa')::
+insert into ex_nation (code, name, continent, capital) values ('YUG', 'Yugoslavia', 'Europe', 'Belgrade')::
+insert into ex_nation (code, name, continent, capital) values ('YMD', 'Yemen Democratic Republic', 'Asia', 'Sana''a')::
+insert into ex_nation (code, name, continent, capital) values ('YEM', 'Yemen', 'Asia', 'Sana''a')::
+insert into ex_nation (code, name, continent, capital) values ('YAR', 'Yemen Arabian Republic', 'Asia', 'Sana''a')::
+insert into ex_nation (code, name, continent, capital) values ('VIN', 'Saint Vincent & the Grenadines', 'Americas', 'Kingstown')::
+insert into ex_nation (code, name, continent, capital) values ('VIE', 'Vietnam', 'Asia', 'Hanoi')::
+insert into ex_nation (code, name, continent, capital) values ('VEN', 'Venezuela', 'Americas', 'Caracas')::
+insert into ex_nation (code, name, continent, capital) values ('VAN', 'Vanuatu', 'Oceania', 'Port Vila')::
+insert into ex_nation (code, name, continent, capital) values ('UZB', 'Uzbekistan', 'Asia', 'Tashkent')::
+insert into ex_nation (code, name, continent, capital) values ('USA', 'United States of America', 'Americas', 'Washington.D.C')::
+insert into ex_nation (code, name, continent, capital) values ('URU', 'Uruguay', 'Americas', 'Montevideo')::
+insert into ex_nation (code, name, continent, capital) values ('URS', 'U.R.S.S.', 'Europe', 'Moscow')::
+insert into ex_nation (code, name, continent, capital) values ('UKR', 'Ukraine', 'Europe', 'Kiev')::
+insert into ex_nation (code, name, continent, capital) values ('UGA', 'Uganda', 'Africa', 'Kampala')::
+insert into ex_nation (code, name, continent, capital) values ('UAE', 'United Arab Emirates', 'Asia', 'Abu Dhabi')::
+insert into ex_nation (code, name, continent, capital) values ('TUR', 'Turkey', 'Europe', 'Ankara')::
+insert into ex_nation (code, name, continent, capital) values ('TUN', 'Tunisia', 'Africa', 'Tunis')::
+insert into ex_nation (code, name, continent, capital) values ('TRI', 'Trinidad and Tobago', 'Americas', 'Port of Spain')::
+insert into ex_nation (code, name, continent, capital) values ('TPE', 'Taiwan', 'Asia', 'Taipei')::
+insert into ex_nation (code, name, continent, capital) values ('TOG', 'Togo', 'Africa', 'Lome')::
+insert into ex_nation (code, name, continent, capital) values ('TKM', 'Turmenistan', 'Asia', 'Ashgabat')::
+insert into ex_nation (code, name, continent, capital) values ('TJK', 'Tajikistan', 'Asia', 'Dushanbe')::
+insert into ex_nation (code, name, continent, capital) values ('THA', 'Thailand', 'Asia', 'Bangkok')::
+insert into ex_nation (code, name, continent, capital) values ('TGA', 'Tonga', 'Oceania', 'Nuku''alofa')::
+insert into ex_nation (code, name, continent, capital) values ('TCH', 'Czechoslovakia', 'Europe', 'Prague')::
+insert into ex_nation (code, name, continent, capital) values ('TAN', 'United Republic of Tanzania', 'Africa', 'Dodoma')::
+insert into ex_nation (code, name, continent, capital) values ('SYR', 'Syrian Arab Republic', 'Asia', 'Damascus')::
+insert into ex_nation (code, name, continent, capital) values ('SWZ', 'Swaziland', 'Africa', 'Mbabane')::
+insert into ex_nation (code, name, continent, capital) values ('SWE', 'Sweden', 'Europe', 'Stockholm')::
+insert into ex_nation (code, name, continent, capital) values ('SVK', 'Slovakia', 'Europe', 'Bratislava')::
+insert into ex_nation (code, name, continent, capital) values ('SUR', 'Surinam', 'Americas', 'Paramaribo')::
+insert into ex_nation (code, name, continent, capital) values ('SUI', 'Switzerland', 'Europe', 'Berne')::
+insert into ex_nation (code, name, continent, capital) values ('SUD', 'Sudan', 'Africa', 'Khartoum')::
+insert into ex_nation (code, name, continent, capital) values ('STP', 'Sao Tome & Principe', 'Africa', 'Sao Tome')::
+insert into ex_nation (code, name, continent, capital) values ('SRI', 'Sri Lanka', 'Asia', 'Sri Jayewardenepura Kotte')::
+insert into ex_nation (code, name, continent, capital) values ('SOM', 'Somalia', 'Africa', 'Mogadishu')::
+insert into ex_nation (code, name, continent, capital) values ('SOL', 'Solomon Islands', 'Oceania', 'Honiara')::
+insert into ex_nation (code, name, continent, capital) values ('SMR', 'San Marino', 'Europe', 'San Marino')::
+insert into ex_nation (code, name, continent, capital) values ('SLO', 'Slovenia', 'Europe', 'Ljubljana')::
+insert into ex_nation (code, name, continent, capital) values ('SLE', 'Sierra Leone', 'Africa', 'Freetown')::
+insert into ex_nation (code, name, continent, capital) values ('SKN', 'Saint Kitts & Nevis', 'Americas', 'Basseterre')::
+insert into ex_nation (code, name, continent, capital) values ('SIN', 'Singapore', 'Asia', 'Singapore')::
+insert into ex_nation (code, name, continent, capital) values ('SEY', 'Seychelles', 'Africa', 'Victoria')::
+insert into ex_nation (code, name, continent, capital) values ('SEN', 'Senegal', 'Africa', 'Dakar')::
+insert into ex_nation (code, name, continent, capital) values ('SAM', 'Samoa', 'Oceania', 'Apia')::
+insert into ex_nation (code, name, continent, capital) values ('RWA', 'Rwanda', 'Africa', 'Kigali')::
+insert into ex_nation (code, name, continent, capital) values ('RUS', 'Russian Federation', 'Europe', 'Moscow')::
+insert into ex_nation (code, name, continent, capital) values ('RSA', 'South Africa', 'Africa', 'Pretoria')::
+insert into ex_nation (code, name, continent, capital) values ('ROU', 'Romania', 'Europe', 'Bucharest')::
+insert into ex_nation (code, name, continent, capital) values ('QAT', 'Qatar', 'Asia', 'Doha')::
+insert into ex_nation (code, name, continent, capital) values ('PUR', 'Puerto Rico', 'Americas', 'San Juan')::
+insert into ex_nation (code, name, continent, capital) values ('PRK', 'Democratic People''s Republic of Korea', 'Asia', 'Pyeongyang')::
+insert into ex_nation (code, name, continent, capital) values ('POR', 'Portugal', 'Europe', 'Lisbon')::
+insert into ex_nation (code, name, continent, capital) values ('POL', 'Poland', 'Europe', 'Warsaw')::
+insert into ex_nation (code, name, continent, capital) values ('PLW', 'Palau', 'Oceania', 'Melekeok')::
+insert into ex_nation (code, name, continent, capital) values ('PLE', 'Palestine', 'Asia', 'Ramallah')::
+insert into ex_nation (code, name, continent, capital) values ('PHI', 'Philippines', 'Asia', 'Manila')::
+insert into ex_nation (code, name, continent, capital) values ('PER', 'Peru', 'Americas', 'Lima')::
+insert into ex_nation (code, name, continent, capital) values ('PAR', 'Paraguay', 'Americas', 'Asuncion')::
+insert into ex_nation (code, name, continent, capital) values ('PAN', 'Panama', 'Americas', 'Panama city')::
+insert into ex_nation (code, name, continent, capital) values ('PAK', 'Pakistan', 'Asia', 'Islambad')::
+insert into ex_nation (code, name, continent, capital) values ('OMA', 'Oman', 'Asia', 'Muscat')::
+insert into ex_nation (code, name, continent, capital) values ('NZL', 'New Zealand', 'Oceania', 'Wellington')::
+insert into ex_nation (code, name, continent, capital) values ('NRU', 'Nauru', 'Oceania', 'Yaren')::
+insert into ex_nation (code, name, continent, capital) values ('NOR', 'Norway', 'Europe', 'Oslo')::
+insert into ex_nation (code, name, continent, capital) values ('NIG', 'Niger', 'Africa', 'Niamey')::
+insert into ex_nation (code, name, continent, capital) values ('PNG', 'Papua-New Guinea', 'Oceania', 'Port Moresby')::
+insert into ex_nation (code, name, continent, capital) values ('NGR', 'Nigeria', 'Africa', 'Abuja')::
+insert into ex_nation (code, name, continent, capital) values ('NEP', 'Nepal', 'Asia', 'Kathmandu')::
+insert into ex_nation (code, name, continent, capital) values ('NCA', 'Nicaragua', 'Americas', 'Managua')::
+insert into ex_nation (code, name, continent, capital) values ('NAM', 'Nambia', 'Africa', 'Windhoek')::
+insert into ex_nation (code, name, continent, capital) values ('MYA', 'Myanmar', 'Asia', 'Naypyidaw')::
+insert into ex_nation (code, name, continent, capital) values ('MTN', 'Mauritania', 'Africa', 'Nouakchott')::
+insert into ex_nation (code, name, continent, capital) values ('MRI', 'Mauritius', 'Africa', 'Port Louis')::
+insert into ex_nation (code, name, continent, capital) values ('MOZ', 'Mozambique', 'Africa', 'Maputo')::
+insert into ex_nation (code, name, continent, capital) values ('MON', 'Monaco', 'Europe', 'Monaco')::
+insert into ex_nation (code, name, continent, capital) values ('MLT', 'Malta', 'Europe', 'Valletta')::
+insert into ex_nation (code, name, continent, capital) values ('MLI', 'Mali', 'Africa', 'Bamako')::
+insert into ex_nation (code, name, continent, capital) values ('MKD', 'Former Yugoslav Republic of Macedonia', 'Europe', 'Skopje')::
+insert into ex_nation (code, name, continent, capital) values ('MGL', 'Mongolia', 'Asia', 'Ulaanbaatar')::
+insert into ex_nation (code, name, continent, capital) values ('MEX', 'Mexico', 'Americas', 'Mexico city')::
+insert into ex_nation (code, name, continent, capital) values ('MDV', 'Maldives', 'Asia', 'Male')::
+insert into ex_nation (code, name, continent, capital) values ('MDA', 'Republic of Mooldova', 'Europe', 'Chisinau')::
+insert into ex_nation (code, name, continent, capital) values ('MAW', 'Malawi', 'Africa', 'lilongwe')::
+insert into ex_nation (code, name, continent, capital) values ('MAR', 'Morocco', 'Africa', 'Rabat')::
+insert into ex_nation (code, name, continent, capital) values ('MAS', 'Malaysia', 'Asia', 'Kuala Lumpur')::
+insert into ex_nation (code, name, continent, capital) values ('MAD', 'Madagascar', 'Africa', 'Antananarivo')::
+insert into ex_nation (code, name, continent, capital) values ('LUX', 'Luxembourg', 'Europe', 'Luxembourg')::
+insert into ex_nation (code, name, continent, capital) values ('LTU', 'Lithuania', 'Europe', 'Vilnius')::
+insert into ex_nation (code, name, continent, capital) values ('LIE', 'Liechtenstein', 'Europe', 'Vaduz')::
+insert into ex_nation (code, name, continent, capital) values ('LIB', 'Lebanon', 'Asia', 'Beirut')::
+insert into ex_nation (code, name, continent, capital) values ('LES', 'Lesotho', 'Africa', 'Maseru')::
+insert into ex_nation (code, name, continent, capital) values ('LCA', 'Saint Lucia', 'Americas', 'Castries')::
+insert into ex_nation (code, name, continent, capital) values ('LBR', 'Liberia', 'Africa', 'Monrovia')::
+insert into ex_nation (code, name, continent, capital) values ('LBA', 'Libyan Arab Jamahiriya', 'Africa', 'Tripoli')::
+insert into ex_nation (code, name, continent, capital) values ('LAT', 'Latvia', 'Europe', 'Riga')::
+insert into ex_nation (code, name, continent, capital) values ('LAO', 'Lao People''s Democratic Republic', 'Asia', 'Vientiane')::
+insert into ex_nation (code, name, continent, capital) values ('KUW', 'Kuwait', 'Asia', 'Kuwait City')::
+insert into ex_nation (code, name, continent, capital) values ('KSA', 'Saudi Arabia', 'Asia', 'Riyadh')::
+insert into ex_nation (code, name, continent, capital) values ('KOR', 'Korea', 'Asia', 'Seoul')::
+insert into ex_nation (code, name, continent, capital) values ('KGZ', 'Kyrgyzstan', 'Asia', 'Bishkek')::
+insert into ex_nation (code, name, continent, capital) values ('KEN', 'kenya', 'Africa', 'Nairobi')::
+insert into ex_nation (code, name, continent, capital) values ('KAZ', 'Kazakhstan', 'Asia', 'Astana')::
+insert into ex_nation (code, name, continent, capital) values ('JPN', 'Japan', 'Asia', 'Tokyo')::
+insert into ex_nation (code, name, continent, capital) values ('JOR', 'Jordan', 'Asia', 'Amman')::
+insert into ex_nation (code, name, continent, capital) values ('JAM', 'Jamaica', 'Americas', 'Kingston')::
+insert into ex_nation (code, name, continent, capital) values ('IVB', 'British Virgin Islands', 'Americas', 'Road Town')::
+insert into ex_nation (code, name, continent, capital) values ('ITA', 'Italy', 'Europe', 'Rome')::
+insert into ex_nation (code, name, continent, capital) values ('ISV', 'Virgin Islands', 'Americas', 'Road Town')::
+insert into ex_nation (code, name, continent, capital) values ('ISR', 'Israel', 'Europe', 'Jerusalem')::
+insert into ex_nation (code, name, continent, capital) values ('ISL', 'Iceland', 'Europe', 'Reykjavik')::
+insert into ex_nation (code, name, continent, capital) values ('IRQ', 'Iraq', 'Asia', 'Baghdad')::
+insert into ex_nation (code, name, continent, capital) values ('IRI', 'Iran', 'Asia', 'Tehran')::
+insert into ex_nation (code, name, continent, capital) values ('IRL', 'Ireland', 'Europe', 'Dublin')::
+insert into ex_nation (code, name, continent, capital) values ('IOP', 'Independent Olympic Participants', '', '')::
+insert into ex_nation (code, name, continent, capital) values ('IOA', 'Individual Olympic Athletes', 'Other', '')::
+insert into ex_nation (code, name, continent, capital) values ('IND', 'India', 'Asia', 'New Delhi')::
+insert into ex_nation (code, name, continent, capital) values ('INA', 'Indonesia', 'Asia', 'Jakarta')::
+insert into ex_nation (code, name, continent, capital) values ('HUN', 'Hungary', 'Europe', 'Budapest')::
+insert into ex_nation (code, name, continent, capital) values ('HON', 'Honduras', 'Americas', 'Tegucigalpa')::
+insert into ex_nation (code, name, continent, capital) values ('NED', 'Netherlands', 'Europe', 'Amsterdam')::
+insert into ex_nation (code, name, continent, capital) values ('HKG', 'Hong Kong', 'Asia', '')::
+insert into ex_nation (code, name, continent, capital) values ('HAI', 'Haiti', 'Americas', 'Port-au-Prince')::
+insert into ex_nation (code, name, continent, capital) values ('GUY', 'Guyana', 'Americas', 'Georgrtown')::
+insert into ex_nation (code, name, continent, capital) values ('GUM', 'Guam', 'Oceania', 'Hagatha')::
+insert into ex_nation (code, name, continent, capital) values ('GUI', 'Guinea', 'Africa', 'Conakry')::
+insert into ex_nation (code, name, continent, capital) values ('GUA', 'Guatemala', 'Americas', 'Guatemala City')::
+insert into ex_nation (code, name, continent, capital) values ('GRN', 'Grenada', 'Americas', 'Saint George''s')::
+insert into ex_nation (code, name, continent, capital) values ('GRE', 'Greece', 'Europe', 'Athens')::
+insert into ex_nation (code, name, continent, capital) values ('GHA', 'Ghana', 'Africa', 'Accra')::
+insert into ex_nation (code, name, continent, capital) values ('GER', 'Germany', 'Europe', 'Berlin')::
+insert into ex_nation (code, name, continent, capital) values ('GEQ', 'Equatorial Guinea', 'Africa', 'Malabo')::
+insert into ex_nation (code, name, continent, capital) values ('GEO', 'Georgia', 'Europe', 'Tbilisi')::
+insert into ex_nation (code, name, continent, capital) values ('GDR', 'German Democratic Republic', 'Europe', 'East Berlin')::
+insert into ex_nation (code, name, continent, capital) values ('GBS', 'Guinea-Bissau', 'Africa', 'Bissau')::
+insert into ex_nation (code, name, continent, capital) values ('GBR', 'Great Britain', 'Europe', 'London')::
+insert into ex_nation (code, name, continent, capital) values ('GAM', 'Gambia', 'Africa', 'Banjul')::
+insert into ex_nation (code, name, continent, capital) values ('GAB', 'Gabon', 'Africa', 'Libreville')::
+insert into ex_nation (code, name, continent, capital) values ('FSM', 'Federated States of Micronesia', 'Oceania', 'Palikir')::
+insert into ex_nation (code, name, continent, capital) values ('FRG', 'Federal Republic of Germany', 'Europe', 'Bonn')::
+insert into ex_nation (code, name, continent, capital) values ('FRA', 'France', 'Europe', 'Paris')::
+insert into ex_nation (code, name, continent, capital) values ('FIN', 'Finland', 'Europe', 'Helsinki')::
+insert into ex_nation (code, name, continent, capital) values ('FIJ', 'Fiji', 'Oceania', 'Suva')::
+insert into ex_nation (code, name, continent, capital) values ('EUN', 'Unified Team', '', '')::
+insert into ex_nation (code, name, continent, capital) values ('ETH', 'Ethiopia', 'Africa', 'Addis Ababa')::
+insert into ex_nation (code, name, continent, capital) values ('EST', 'Estonia', 'Europe', 'Tallinn')::
+insert into ex_nation (code, name, continent, capital) values ('ESP', 'Spain', 'Europe', 'Madrid')::
+insert into ex_nation (code, name, continent, capital) values ('ESA', 'El Salvador', 'Americas', 'San Salvador')::
+insert into ex_nation (code, name, continent, capital) values ('ERI', 'Eritrea', 'Africa', 'Asmara')::
+insert into ex_nation (code, name, continent, capital) values ('EGY', 'Arab Republic of Egypt', 'Africa', 'Cairo')::
+insert into ex_nation (code, name, continent, capital) values ('ECU', 'Ecuador', 'Americas', 'Quito')::
+insert into ex_nation (code, name, continent, capital) values ('DOM', 'Dominican Republic', 'Americas', 'Santo Domingo')::
+insert into ex_nation (code, name, continent, capital) values ('DMA', 'Dominica', 'Americas', 'Roseau')::
+insert into ex_nation (code, name, continent, capital) values ('DJI', 'Djibouti', 'Africa', 'Djibouti')::
+insert into ex_nation (code, name, continent, capital) values ('DEN', 'Denmark', 'Europe', 'Copenhagen')::
+insert into ex_nation (code, name, continent, capital) values ('CZE', 'Czech Republic', 'Europe', 'Prague')::
+insert into ex_nation (code, name, continent, capital) values ('CYP', 'Cyprus', 'Europe', 'Nicosia')::
+insert into ex_nation (code, name, continent, capital) values ('CUB', 'Cuba', 'Americas', 'Havana')::
+insert into ex_nation (code, name, continent, capital) values ('CRO', 'Croatia', 'Europe', 'Zagreb')::
+insert into ex_nation (code, name, continent, capital) values ('CRC', 'Costa Rica', 'Americas', 'San Jose')::
+insert into ex_nation (code, name, continent, capital) values ('CPV', 'Cape Verde', 'Africa', 'Praia')::
+insert into ex_nation (code, name, continent, capital) values ('COM', 'Comoros', 'Africa', 'Moroni')::
+insert into ex_nation (code, name, continent, capital) values ('COL', 'Colombia', 'Americas', 'Bogota')::
+insert into ex_nation (code, name, continent, capital) values ('COK', 'CookIslands', 'Oceania', 'Avarua')::
+insert into ex_nation (code, name, continent, capital) values ('COD', 'Democratic Republic of the Congo', 'Africa', 'Kinshasa')::
+insert into ex_nation (code, name, continent, capital) values ('CMR', 'Cameroon', 'Africa', 'Yaounde')::
+insert into ex_nation (code, name, continent, capital) values ('CIV', 'Cote dlvoire', 'Africa', 'Yamoussoukro')::
+insert into ex_nation (code, name, continent, capital) values ('CHN', 'People''s Republic of China', 'Asia', 'Beijing')::
+insert into ex_nation (code, name, continent, capital) values ('CHI', 'Chile', 'Americas', 'Santiago')::
+insert into ex_nation (code, name, continent, capital) values ('CHA', 'Chad', 'Africa', 'N''djamena')::
+insert into ex_nation (code, name, continent, capital) values ('CGO', 'Congo', 'Africa', 'Brazzaville')::
+insert into ex_nation (code, name, continent, capital) values ('CAY', 'Cayman Islands', 'Americas', 'George Town')::
+insert into ex_nation (code, name, continent, capital) values ('CAN', 'Canada', 'Americas', 'Ottawa')::
+insert into ex_nation (code, name, continent, capital) values ('CAM', 'Cambodia', 'Asia', 'Phnom Penh')::
+insert into ex_nation (code, name, continent, capital) values ('CAF', 'Central African Republic', 'Africa', 'Bangui')::
+insert into ex_nation (code, name, continent, capital) values ('BUR', 'Burkina Faso', 'Africa', 'Ouagadougou')::
+insert into ex_nation (code, name, continent, capital) values ('BUL', 'Bulgaria', 'Europe', 'Sofia')::
+insert into ex_nation (code, name, continent, capital) values ('BRU', 'Brunei Darussalam', 'Asia', 'Bandar Seri Begawan')::
+insert into ex_nation (code, name, continent, capital) values ('BRN', 'Bahrain', 'Asia', 'Manama')::
+insert into ex_nation (code, name, continent, capital) values ('BRA', 'Brazil', 'Americas', 'Brasilia')::
+insert into ex_nation (code, name, continent, capital) values ('BOT', 'Botswana', 'Africa', 'Gaborone')::
+insert into ex_nation (code, name, continent, capital) values ('BOL', 'Bolivia', 'Americas', 'Sucre')::
+insert into ex_nation (code, name, continent, capital) values ('BLR', 'Belarus', 'Europe', 'Minsk')::
+insert into ex_nation (code, name, continent, capital) values ('BIZ', 'Belize', 'Americas', 'Belmopan')::
+insert into ex_nation (code, name, continent, capital) values ('BIR', 'Burma', 'Asia', '')::
+insert into ex_nation (code, name, continent, capital) values ('BIH', 'Bosnia & Herzegovina', 'Europe', 'Sarajevo')::
+insert into ex_nation (code, name, continent, capital) values ('BHU', 'Bhutan', 'Asia', 'Thimphu')::
+insert into ex_nation (code, name, continent, capital) values ('BER', 'Bermuda', 'Americas', 'Hamilton')::
+insert into ex_nation (code, name, continent, capital) values ('BEN', 'Benin', 'Africa', 'Porto-Novo')::
+insert into ex_nation (code, name, continent, capital) values ('BEL', 'Belgium', 'Europe', 'Brussels')::
+insert into ex_nation (code, name, continent, capital) values ('BDI', 'Burundi', 'Africa', 'Bujumbura')::
+insert into ex_nation (code, name, continent, capital) values ('BAR', 'Barbados', 'Americas', 'Bridgetown')::
+insert into ex_nation (code, name, continent, capital) values ('BAN', 'Bangladesh', 'Asia', 'Dhaka')::
+insert into ex_nation (code, name, continent, capital) values ('BAH', 'Bahamas', 'Americas', 'Nassau')::
+insert into ex_nation (code, name, continent, capital) values ('AZE', 'Azerbaijan', 'Europe', 'Baku')::
+insert into ex_nation (code, name, continent, capital) values ('AUT', 'Austria', 'Europe', 'Vienna')::
+insert into ex_nation (code, name, continent, capital) values ('AUS', 'Australia', 'Oceania', 'Canberra')::
+insert into ex_nation (code, name, continent, capital) values ('ASA', 'American Samoa', 'Oceania', 'Pago Pago')::
+insert into ex_nation (code, name, continent, capital) values ('ARU', 'Aruba', 'Americas', 'Oranjestad')::
+insert into ex_nation (code, name, continent, capital) values ('ARM', 'Armenia', 'Europe', 'Yerevan')::
+insert into ex_nation (code, name, continent, capital) values ('ARG', 'Argentina', 'Americas', 'Buenos Aires')::
+insert into ex_nation (code, name, continent, capital) values ('ANT', 'Antigua & Barbuda', 'Americas', 'Saint John''s')::
+insert into ex_nation (code, name, continent, capital) values ('ANG', 'Angola', 'Africa', 'Luanda')::
+insert into ex_nation (code, name, continent, capital) values ('AND', 'Andorra', 'Europe', 'Andorra la Vella')::
+insert into ex_nation (code, name, continent, capital) values ('ALG', 'Algeria', 'Africa', 'Algiers')::
+insert into ex_nation (code, name, continent, capital) values ('ALB', 'Albania', 'Europe', 'Tirana')::
+insert into ex_nation (code, name, continent, capital) values ('AHO', 'Netherlands Antilles', 'Americas', 'Willemstad')::
+insert into ex_nation (code, name, continent, capital) values ('AFG', 'Afghanistan', 'Asia', 'Kabul')::
+
+
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30140, 'GRE', 'Vouliagmeni Olympic Centre', 7024.00, 3400, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30139, 'GRE', 'Goudi Olympic Hall', 21000.00, 5000, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30138, 'GRE', 'Athens Olympic Tennis Centre', 12800.00, 3200, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30137, 'GRE', 'Schinias Olympic Rowing and Canoeing Centre', 27000.00, 6700, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30136, 'GRE', 'Peristeri Olympic Boxing Hall', 23000.00, 5600, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30135, 'GRE', 'Panathinaiko Stadium', 86300.00, 50000, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30134, 'GRE', 'Olympic Velodrome', 20000.00, 3300, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30133, 'GRE', 'Olympic Stadium', 54700.00, 13000, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30132, 'GRE', 'Olympic Softball ex_stadium', 31000.00, 3400, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30131, 'GRE', 'Olympic Sailing Centre', 9000.00, 1600, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30130, 'GRE', 'Olympic Modern Pentathlon Centre', 18000.00, 5000, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30129, 'GRE', 'Olympic Indoor Hall', 34100.00, 18800, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30128, 'GRE', 'Olympic Hockey Centre', 24000.00, 5200, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30127, 'GRE', 'Olympic Hall', 52400.00, 21000, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30126, 'GRE', 'Olympic Beach Volleyball Centre', 35000.00, 7300, 'Faliro, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30125, 'GRE', 'Olympic Baseball Centre', 34500.00, 6700, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30124, 'GRE', 'Olympic Aquatic Centre', 42500.00, 11500, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30123, 'GRE', 'Nikaia Olympic Weightlifting Hall', 34000.00, 5100, 'Nikaia, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30047, 'USA', 'Orange Bowl', 86520.00, 72700, 'Miami, Florida')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30046, 'USA', 'Omni Coliseum', 42300.00, 31656, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30045, 'USA', 'Olympic Stadium', 124000.00, 85600, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30044, 'USA', 'Ocoee Whitewater Center', 34650.00, 14400, 'Ocoee River, Tennessee')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30043, 'USA', 'Morehouse College Gymnasium', 35600.00, 6000, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30042, 'USA', 'Road Courses', 87500.00, 800, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30041, 'USA', 'Legion Field', 25000.00, 81700, 'Birminghan, Alabama')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30040, 'USA', 'Lake Lanier', 36500.00, 17300, 'Gainsesville, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30039, 'USA', 'Golden Park', 37520.00, 8800, 'Columbus, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30038, 'USA', 'Georgia World Congress Center', 130000.00, 60000, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30037, 'USA', 'Georgia Tech Aquatic Center', 45000.00, 15000, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30036, 'USA', 'Georgia State University Gymnasium', 11000.00, 3500, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30035, 'USA', 'Georgia International Horse Park', 48000.00, 32000, 'Conyers, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30034, 'USA', 'Georgia Dome', 50000.00, 34500, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30033, 'USA', 'Florida Citrus Bowl', 87000.00, 65000, 'Olrando, Florida')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30032, 'USA', 'Clark Atlanta University', 10000.00, 5000, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30031, 'USA', 'Atlanta-Fulton Country Stadium ', 110000.00, 54000, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30030, 'USA', 'Atlanta Beach', 21000.00, 12600, 'Jonesboro, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30029, 'USA', 'Alexander Memorial Coliseum', 71500.00, 9191, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30028, 'AUS', 'Melbourne Cricket Ground, Melbourne', 110000.00, 98000, 'Yarra Park')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30027, 'AUS', 'Hindmarsh Stadium, Adelaide', 31000.00, 20000, 'Hindmarsh, Adelaide')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30026, 'AUS', 'Bruce Stadium, Canberra', 64000.00, 40000, 'Canberra ACT')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30025, 'AUS', 'Brisbane Cricket Ground, Brisbane', 34000.00, 37000, 'Brisbane Queensland')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30024, 'AUS', 'Pavilion 4', 20000.00, 6000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30023, 'AUS', 'Pavilion 3', 21000.00, 6000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30022, 'AUS', 'Pavilion 2', 20000.00, 6000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30073, 'KOR', 'Modern Pentathlon Stadium', 25000.00, 10000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30072, 'KOR', 'Royal Bowling Center', 15000.00, 5000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30071, 'KOR', 'Changchung Gymnasium', 5527.00, 5000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30070, 'KOR', 'Saemaul Sports Hall', 37500.00, 15000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30069, 'KOR', 'Dongdaemun Stadium', 95764.00, 22700, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30068, 'KOR', 'Wondang Ranch', 35000.00, 10000, 'Goyang, Gyeonggi-do, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30067, 'KOR', 'Seoul Equestrian Park ', 27000.00, 30000, 'Gwacheon, Gyeonggi-do, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30066, 'KOR', 'Hwarang Archery Field', 35000.00, 7500, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30065, 'KOR', 'Olympic Swimming Pool', 12742.00, 10000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30064, 'KOR', 'Olympic Tennis Courts', 29064.00, 10000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30063, 'KOR', 'Olympic Gymnastics Hall', 11800.00, 15000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30062, 'KOR', 'Olympic Weightlifting Gymnasium', 5617.00, 3500, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30061, 'KOR', 'Olympic Fencing Gymnasium', 8750.00, 7000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30060, 'KOR', 'Olympic Velodrome', 5148.00, 6000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30059, 'KOR', 'Jamsil Baseball Stadium', 26331.00, 30500, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30058, 'KOR', 'Jamsil Students'' Gymnasium', 11471.00, 7200, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30057, 'KOR', 'Jamsil Indoor Swimming Pool', 8073.00, 8000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30056, 'KOR', 'Jamsil Gymnasium', 7098.00, 20000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30055, 'KOR', 'Seoul Olympic Stadium', 75469.00, 100000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30054, 'USA', 'Wolf Creek Shooting Complex', 25000.00, 7500, 'Atlanta, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30053, 'USA', 'Wassaw Sound', 11000.00, 1000, 'Savannah, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30052, 'USA', 'University of Georgia Coliseum', 35000.00, 10000, 'Athena, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30051, 'USA', 'Stone Mountain Park Tennis Center', 34150.00, 27500, 'Stone Mountain, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30050, 'USA', 'Stone Mountain Park Archery Center and Velodrome', 42000.00, 11200, 'Stone Mountain, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30049, 'USA', 'Sanford Stadium', 39520.00, 86100, 'Athena, Georgia')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30048, 'USA', 'RFK Memorial Stadium', 75420.00, 56500, 'Washington, DC')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30098, 'ESP', 'Palau Blaugrana', 52400.00, 4000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30097, 'ESP', 'Olympic Stadium', 34650.00, 8000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30096, 'ESP', 'Olympic Harbour', 80200.00, 20000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30095, 'ESP', 'Mollet shooting range', 34210.00, 19000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30094, 'ESP', 'L''Hospitalet Baseball Stadium', 60000.00, 34000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30093, 'ESP', 'Institut Nacional d''Educacio Fisica de Catalunya', 65000.00, 15000, 'Lleida, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30092, 'ESP', 'FC Barcelona Stadium', 36000.00, 7000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30091, 'ESP', 'Estacio del Nord', 42000.00, 8500, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30090, 'ESP', 'Canal Olympic de Castelldefels', 40000.00, 10000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30089, 'ESP', 'Bernat Picornell pools', 36540.00, 9000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30088, 'ESP', 'Banyoles Lake', 35000.00, 15000, 'Banyoles, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30087, 'ESP', 'A-17 motorway circuit', 75840.00, 8000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30086, 'KOR', 'Sungkyunkwan University Gymnasium', 25000.00, 6000, 'Suwon, Gyeonggi-do, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30085, 'KOR', 'Busan Yachting Center', 31000.00, 8000, 'Busan, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30084, 'KOR', 'Sangmu Gymnasium', 25000.00, 10000, 'Siheung, Gyeonggi-do, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30083, 'KOR', 'Hanyang University Gymnasium', 20000.00, 8000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30082, 'KOR', 'Seoul National University Gymnasium ', 23000.00, 7500, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30081, 'KOR', 'Taenung International Shooting Range', 18500.00, 8000, 'Seoul, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30080, 'KOR', 'Suwon Gymnasium', 2025.00, 9000, 'Suwon, Gyeonggi-do, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30079, 'KOR', 'Seongnam Stadium', 35000.00, 10000, 'Seongnam, Gyeonggi-do, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30078, 'KOR', 'Han River Regatta Course', 57000.00, 25000, 'Hanam, Gyeonggi-do, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30077, 'KOR', 'Busan Stadium', 7810.00, 5000, 'Busan, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30076, 'KOR', 'Daegu Stadium', 13843.00, 13000, 'Daegu, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30075, 'KOR', 'Gwangju Stadium', 12023.00, 14600, 'Gwangju, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30074, 'KOR', 'Daejeon Stadium', 34000.00, 7500, 'Daejeon, Korea')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30122, 'GRE', 'Markopoulo Olympic Shooting Centre', 25000.00, 4000, 'Markopoulo, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30121, 'GRE', 'Markopoulo Olympic Equestrian Centre', 64000.00, 15000, 'Markopoulo, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30120, 'GRE', 'Indoor Arena', 34000.00, 5800, 'Faliro, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30119, 'GRE', 'Galatsi Olympic Hall', 26500.00, 6500, 'Galatsi, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30118, 'GRE', 'Fencing Hall', 64810.00, 5000, 'Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30117, 'GRE', 'Faliro Coastal Zone Olympic Complex', 34650.00, 12171, 'Faliro, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30116, 'GRE', 'Athens Olympic Stadium ', 120400.00, 71030, 'Maroussi, Athens, Greece ')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30115, 'GRE', 'Ano Liossia Olympic Hall', 35000.00, 9300, 'Ano Liosia, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30114, 'GRE', 'Ano Liossia', 34000.00, 12000, 'Ano Liosia, Athens, Greece')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30113, 'ESP', 'Vall d''Hebron tennis complex ', 21000.00, 4000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30112, 'ESP', 'Vall d''Hebron archery field', 24000.00, 5800, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30111, 'ESP', 'The Velodrom', 19000.00, 6000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30110, 'ESP', 'Terrassa Hockey Stadium', 31000.00, 4600, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30109, 'ESP', 'Sant Sadurn d''Anoia circuit ', 24100.00, 5000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30108, 'ESP', 'Real Club de Polo', 34500.00, 4600, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30107, 'ESP', 'Pavello L''Espanya Industrial', 16240.00, 3100, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30106, 'ESP', 'Pavello de la Vall d''Hebron', 56400.00, 3400, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30105, 'ESP', 'Pavello de la Mar Bella', 62000.00, 15000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30104, 'ESP', 'Pavello Club Joventut Badalona', 15000.00, 2800, 'Badalona, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30103, 'ESP', 'Parc del Segre', 11200.00, 3000, 'Lleida, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30102, 'ESP', 'Palau Sant Jordi', 27110.00, 17000, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30101, 'ESP', 'Palau d''Esports in Granollers', 56000.00, 1800, 'Granollers, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30100, 'ESP', 'Palau d''Esports in Badalona', 34000.00, 4500, 'Badalona, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30099, 'ESP', 'Palau de la Metal-lurgia', 36500.00, 5400, 'Barcelona, Catalonia, Spain')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30021, 'AUS', 'The Dome', 53000.00, 10000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30020, 'AUS', 'Sydney Superdome', 61000.00, 21000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30019, 'AUS', 'Sydney International Regatta Centre, Penrith Lakes', 60000.00, 73000, 'Penrith Lakes')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30018, 'AUS', 'Dunc Gray Velodrome, Horsley Park', 21000.00, 50000, 'Horsley Park')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30017, 'AUS', 'Sydney International Archery Park', 16000.00, 4500, 'Millennium Parklands, Sydney Olympic Park Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30016, 'AUS', 'Sydney International Aquatic Centre', 36400.00, 17500, 'Sydney Olympic Park')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30015, 'AUS', 'Sydney Football Stadium, Centennial Parklands', 27000.00, 42000, 'Moore Park adjacent to Centennial Parklands')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30014, 'AUS', 'Sydney Entertainment Centre', 34000.00, 11000, 'Darling Harbour')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30013, 'AUS', 'Sydney Convention and Exhibition Centre', 60000.00, 30000, 'Darling Harbour')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30012, 'AUS', 'State Sports Centre', 21000.00, 5000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30011, 'AUS', 'State Hockey Centre', 32000.00, 8000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30010, 'AUS', 'Sydney International Shooting Centre, Cecil Park', 34000.00, 7000, 'Cecil Park, South West Sydney')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30009, 'AUS', 'Sydney Harbour', 40000.00, 10000, 'Rushcutters Bay, New South Wales')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30008, 'AUS', 'Ryde Aquatic Leisure Centre', 12000.00, 3900, 'Ryde')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30007, 'AUS', 'Penrith Whitewater Stadium, Penrith Lakes', 35000.00, 8500, 'Penrith')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30006, 'AUS', 'Olympic Stadium', 170000.00, 115600, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30005, 'AUS', 'New South Wales Tennis Centre', 40000.00, 10000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30004, 'AUS', 'Mountain Bike Course, Fairfield City Farm', 76250.00, 21000, 'Fairfield City Farm Abbotsbury')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30003, 'AUS', 'DUNC GRAY VELODROME, BANKSTOWN', 67500.00, 6000, 'The Crest of Bankstown')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30002, 'AUS', 'Beach Volleyball centre, Bondi', 34000.00, 10000, 'Bondi Beach')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30001, 'AUS', 'Baseball Stadium', 85000.00, 21000, 'Sydney Olympic Park, Homebush Bay')::
+insert into ex_stadium (code, nation_code, name, area, seats, address) values (30000, 'AUS', 'Blacktown Olympic Centre Aquilina Reserve', 75000.00, 12000, 'Blacktown')::

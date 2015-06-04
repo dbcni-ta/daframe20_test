@@ -1,0 +1,45 @@
+#*
+
+-- DynamicTactics 작성건.
+
+*#
+
+SELECT 
+    CODE, 
+    NAME, 
+    CONTINENT, 
+    CAPITAL
+FROM 
+    EX_NATION
+$variant.addWhere("NAME",$input.fetch("NAME")) ## AND NAME = $input.NAME
+$variant.addWhere("CODE",$input.fetch("CODE"))
+$variant.addWhere("CONTINENT",$input.fetch("CONTINENT"))
+$variant.addWhere("CAPITAL",$input.fetch("CAPITAL"))
+$variant.printWhere()
+
+#*
+
+-- 만약 일반 Tactics로 작성할 경우...
+
+SELECT 
+    CODE, 
+    NAME, 
+    CONTINENT, 
+    CAPITAL
+FROM 
+    EX_NATION
+WHERE 1=1
+#if ($input.isContain("NAME"))
+AND 	NAME = $input.NAME
+#end
+#if ($input.isContain("CODE"))
+AND 	CODE = $input.CODE
+#end
+#if ($input.isContain("CONTINENT"))
+AND 	CONTINENT = $input.CONTINENT
+#end
+#if ($input.isContain("CAPITAL"))
+AND 	CAPITAL = $input.CAPITAL
+#end
+
+*#

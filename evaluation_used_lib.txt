@@ -1,0 +1,45 @@
+// [START] evaluation 프로젝트 실행 (아래 JAR 파일이 없으면 WAS 기동 시 오류 발생함)
+// WEB-INF\lib 에 필요한 파일 리스트 (실행시 필요)
+activation-1.1.jar    // 자바메일
+commons-collections-3.2.1.jar    // com.cni.fw.web.was.ServiceStarter, 프라퍼티, JNDI 관련
+commons-dbcp-1.2.2.jar    // JNDI 관련
+commons-pool-1.6.jar    // JNDI 관련
+commons-fileupload-1.2.2.jar    // 파일 업로드 사용
+commons-net-3.1.jar    // Network, Stream 관련
+commons-io-2.2.jar    // FilenameUtil 사용
+commons-email-1.3.2.jar    // 메일 API 사용
+commons-lang-2.4.jar    // StringUtil
+daframe-core.jar    // DAFrame Core
+daframe-ext.jar    // DAFrame Ext
+json-simple-1.1.1.jar    // MCI Json 채널 용
+ojdbc14.jar    // 오라클 접속
+poi-3.8-20120326.jar    // 엑셀 다운로드 사용
+log4j-1.2.17.jar    // 로깅
+velocity-1.7.jar    // Tactics 용
+mail-1.4.2.jar    // 메일?
+wisegrid-xlib.jar    // WiseGrid 용 샘플 실행 용  <== 중복1
+
+// [END]
+
+
+
+// [START] evaluation 예제 실행 용
+// lib 에 필요한 파일 (빌드시 필요)
+geronimo-jsp_2.0_spec-1.1.jar
+geronimo-servlet_2.4_spec-1.1.1.jar
+wisegrid-xlib.jar    // Wisegrid 예제용, 또는 프로젝트에서 Wisegrid 컴포넌트 사용 시 필요 <== 중복1
+
+// [END]
+
+
+
+// [START] 제외된 JAR 파일, 2015.05.27 seongj
+
+jaxb-api.jar    // [확인필요] 다프레임 실행 시 오류안남, 2015.04.20 전성재
+jaxb-impl.jar    // [확인필요] 다프레임 실행 시 오류안남, 2015.04.20 전성재
+jaxb-jsr173_1.0_api.jar    // [확인필요] 다프레임 실행 시 오류안남, 2015.04.20 전성재
+jaxb1-impl.jar    // [확인필요] 다프레임 실행 시 오류안남, 2015.04.20 전성재
+jndi-1.2.1-fssp-1.2.b3-fscontext.jar    // [확인필요] 다프레임 실행 시 오류안남, 2015.04.20 전성재
+jndi-1.2.1-fssp-1.2.b3-providerutil.jar    // [확인필요] 다프레임 실행 시 오류안남, 2015.04.20 전성재
+
+// [END

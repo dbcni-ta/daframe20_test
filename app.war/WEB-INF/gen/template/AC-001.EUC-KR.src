@@ -1,0 +1,56 @@
+package $input.pkgName;
+
+import $input.bizClzFullName;
+import com.cni.fw.ff.dto.CauseDTO;
+import com.cni.fw.ff.dto.EffectDTO;
+import com.cni.fw.ff.exception.FrameException;
+import com.cni.fw.ff.exception.ServiceException;
+import java.sql.SQLException;
+
+/**
+ *  <pre>
+ *  $input.ucName $input.evName ($input.command)
+ *
+ *  개발자              : $input.developer
+ *
+ *  작성날짜            : $input.lastDt
+ *
+ *  유스케이스 명       : $input.ucName
+ *  유스케이스 아이디   : $input.ucId
+ *  이벤트 명           : $input.evName
+ *  이벤트 아이디       : $input.evId 
+ *  설계자              : $input.designer
+ * 
+ *  업무 유형           : $input.bizType
+ *  입력 채널 유형      : $input.ipType
+ *  출력 채널 유형      : $input.opType
+ *  출력 URL            : $input.opUrl
+ *
+ *  비고                : $input.remark
+ *  </pre>
+ */
+public class $input.clzName extends $input.bizClzName {
+
+
+    public ${input.clzName}(Class clazz) throws FrameException {
+        super(clazz);
+    }
+#if ($input.bizType == "XA") 
+    
+    protected void prepare() throws FrameException, ServiceException, SQLException {
+    
+		// →→ 아래의 설명을 확인하신후 모든 주석을 삭제하시고 작업하십시요.
+		
+		// 본 prepare() 메소드에서는 사용할 분산 DB 코드를 아래의 예시 코드 형태를 사용해 반드시 1개 이상 설정해야합니다.
+		// →→ addSlave("<Alias>", new SlaveTx("<DatasourceName>"));
+		// 이상에서 설정한 <Alias>를 사용해 process 내에서 대상 DBC 를 호출합니다.
+	
+	}
+#end
+
+    protected void process(CauseDTO input, EffectDTO output) throws FrameException, ServiceException, SQLException {
+
+        // →→ 본 라인을 삭제하신 후 코딩을 진행하십시요.
+        
+    }
+}

@@ -1,0 +1,17 @@
+$caption.add("코드",10)
+$caption.add("국가코드",15)
+$caption.add("경기장",20)
+$caption.add("좌석수",10)
+$caption.add("경기장주소",50)
+
+
+SELECT 
+    CODE, 
+	NATION_CODE,
+    NAME, 
+    SEATS, 
+    ADDRESS
+FROM 
+    EX_STADIUM
+WHERE
+	SEATS > 80000

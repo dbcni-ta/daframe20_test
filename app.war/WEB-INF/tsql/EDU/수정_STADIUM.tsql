@@ -1,0 +1,8 @@
+UPDATE EX_STADIUM
+SET 
+    NATION_CODE = $input.NATION_CODE, 
+    NAME = $input.NAME, 
+    SEATS = $input.SEATS, 
+    ADDRESS = $input.ADDRESS
+WHERE  
+    CODE = $input.CODE

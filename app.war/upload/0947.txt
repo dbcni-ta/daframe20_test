@@ -1,0 +1,3057 @@
+
+2015-03-24 09:47:14
+Full thread dump Java HotSpot(TM) Server VM (20.4-b02 mixed mode):
+
+"*** Profiler Agent Special Execution Thread 2" daemon prio=10 tid=0x5ed54800 nid=0xe6c in Object.wait() [0x5ce2f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x196f9d90> (a java.lang.Object)
+	at java.lang.Object.wait(Object.java:485)
+	at org.netbeans.lib.profiler.server.ProfilerServer.getLastResponse(ProfilerServer.java:451)
+	- locked <0x196f9d90> (a java.lang.Object)
+	- locked <0x0b90d458> (a java.lang.Class for org.netbeans.lib.profiler.server.ProfilerServer)
+	at org.netbeans.lib.profiler.server.ProfilerInterface.getAndInstrumentClasses(ProfilerInterface.java:613)
+	at org.netbeans.lib.profiler.server.ProfilerInterface.access$900(ProfilerInterface.java:70)
+	at org.netbeans.lib.profiler.server.ProfilerInterface$InitiateInstThread.run(ProfilerInterface.java:201)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(idle)" daemon prio=6 tid=0x60550000 nid=0xac0 waiting on condition [0x5cd0f000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x153166a0> (a java.util.concurrent.SynchronousQueue$TransferStack)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:196)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:424)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:323)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:874)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:945)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(34)-210.127.33.16" daemon prio=6 tid=0x5ed54000 nid=0x364 runnable [0x5d8df000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+	- locked <0x3fd353c0> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:66)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- <0x4b9238a8> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"16:ZACH:20150324-718" daemon prio=6 tid=0x5ed53c00 nid=0x16ec waiting for monitor entry [0x64fff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.SelfTuningWorkManagerImpl$WorkAdapterImpl.run(SelfTuningWorkManagerImpl.java:545)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-712" daemon prio=6 tid=0x5ed53400 nid=0x16e8 waiting for monitor entry [0x64f6f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-720" daemon prio=6 tid=0x5ed53000 nid=0x16e4 waiting for monitor entry [0x64edf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:72)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '93' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5bbf1000 nid=0x16e0 in Object.wait() [0x64e4f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a09d0b8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a09d0b8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-709" daemon prio=6 tid=0x5bbf0c00 nid=0x16dc waiting for monitor entry [0x64dbf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-733" daemon prio=6 tid=0x5bbf0400 nid=0x16d8 waiting for monitor entry [0x64d2f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:68)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-704" daemon prio=6 tid=0x5bbf0000 nid=0x16d4 waiting for monitor entry [0x64c9f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-708" daemon prio=6 tid=0x5bbef800 nid=0x16d0 waiting for monitor entry [0x64c0f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '80' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5bbef400 nid=0x16cc in Object.wait() [0x64b7f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a1378d8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a1378d8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-737" daemon prio=6 tid=0x5bbeec00 nid=0x16c8 waiting for monitor entry [0x64aef000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:623)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-677" daemon prio=6 tid=0x5bbee400 nid=0x16c4 in Object.wait() [0x64a5f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a0bec28> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a0bec28> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-660" daemon prio=6 tid=0x5bbee000 nid=0x16c0 in Object.wait() [0x649cf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a0ccd50> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a0ccd50> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '87' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5bbed800 nid=0x16bc in Object.wait() [0x6493f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a0dce08> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a0dce08> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-715" daemon prio=6 tid=0x60553000 nid=0x16b8 waiting for monitor entry [0x648af000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-694" daemon prio=6 tid=0x60552c00 nid=0x16b4 waiting for monitor entry [0x6481f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-653" daemon prio=6 tid=0x60552400 nid=0x16b0 in Object.wait() [0x6478f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a11e6d0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a11e6d0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-716" daemon prio=6 tid=0x60551c00 nid=0x16ac waiting for monitor entry [0x646ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[ACTIVE] ExecuteThread: '82' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x60551800 nid=0x16a8 in Object.wait() [0x6466f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a12a768> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a12a768> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-681" daemon prio=6 tid=0x60551000 nid=0x16a4 waiting for monitor entry [0x645df000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-699" daemon prio=6 tid=0x60550c00 nid=0x1694 waiting for monitor entry [0x6454f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[ACTIVE] ExecuteThread: '78' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x60550400 nid=0x167c in Object.wait() [0x644bf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a152468> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a152468> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-656" daemon prio=6 tid=0x6054f800 nid=0x554 in Object.wait() [0x641ef000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a15af68> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a15af68> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '76' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5ece9c00 nid=0x974 in Object.wait() [0x6415f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a166960> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a166960> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-693" daemon prio=6 tid=0x5ece9400 nid=0xd2c waiting for monitor entry [0x640cf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:41)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-701" daemon prio=6 tid=0x5ece9000 nid=0x620 waiting for monitor entry [0x6403f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-687" daemon prio=6 tid=0x5ece8800 nid=0x1024 in Object.wait() [0x63faf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a17d310> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a17d310> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-682" daemon prio=6 tid=0x5ece8000 nid=0x12a0 waiting for monitor entry [0x63f1f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-742" daemon prio=6 tid=0x5ece7c00 nid=0xf3c waiting for monitor entry [0x63e8f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:623)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-702" daemon prio=6 tid=0x5ece7400 nid=0x11e0 waiting for monitor entry [0x63dff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-696" daemon prio=6 tid=0x5ece7000 nid=0xaa8 waiting for monitor entry [0x63d6f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-678" daemon prio=6 tid=0x5ece6800 nid=0xad8 in Object.wait() [0x63cdf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a177430> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a177430> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-688" daemon prio=6 tid=0x5ece6400 nid=0x970 waiting for monitor entry [0x63c4f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-673" daemon prio=6 tid=0x5ec6bc00 nid=0x978 in Object.wait() [0x63bbf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a1bcac8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a1bcac8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-719" daemon prio=6 tid=0x5ec6b400 nid=0x1140 waiting for monitor entry [0x63b2f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-680" daemon prio=6 tid=0x5ec6b000 nid=0x80c in Object.wait() [0x63a9f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a1d3ce8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a1d3ce8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-713" daemon prio=6 tid=0x5ec6a800 nid=0xea4 waiting for monitor entry [0x63a0f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '62' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5ec6a000 nid=0x2e0 in Object.wait() [0x6397f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a19edd0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a19edd0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-707" daemon prio=6 tid=0x5ec69c00 nid=0x1d8 waiting for monitor entry [0x638ef000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-710" daemon prio=6 tid=0x5ec69400 nid=0xa2c waiting for monitor entry [0x633df000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-684" daemon prio=6 tid=0x5ec69000 nid=0xc78 waiting for monitor entry [0x5f87f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-736" daemon prio=6 tid=0x5ec68800 nid=0xea8 waiting for monitor entry [0x5f6bf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:623)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-683" daemon prio=6 tid=0x5f009800 nid=0x1100 waiting for monitor entry [0x6385f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR09AC.process(COUNTR09AC.java:51)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SapTxService.executeSingleTx(SapTxService.java:34)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:223)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-672" daemon prio=6 tid=0x5f009000 nid=0xb48 in Object.wait() [0x637cf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a1fd8b8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a1fd8b8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '55' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5f008c00 nid=0x648 in Object.wait() [0x6373f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a202b08> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a202b08> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-667" daemon prio=6 tid=0x587b4400 nid=0x1364 waiting for monitor entry [0x636af000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:223)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '53' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5f008400 nid=0x838 in Object.wait() [0x6361f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a212340> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a212340> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '52' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5f008000 nid=0xdf0 in Object.wait() [0x6358f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1a22e258> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1a22e258> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-697" daemon prio=6 tid=0x58b19400 nid=0x7dc waiting for monitor entry [0x634ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:223)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-698" daemon prio=6 tid=0x58a34800 nid=0x1348 waiting for monitor entry [0x6346f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:72)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:223)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-703" daemon prio=6 tid=0x56dca000 nid=0x484 waiting for monitor entry [0x6334f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:223)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '48' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x56dc9c00 nid=0xde0 in Object.wait() [0x632bf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x192e5020> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x192e5020> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '47' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x56dc7000 nid=0xa54 in Object.wait() [0x6310f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x19308b00> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x19308b00> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-675" daemon prio=6 tid=0x56dc8800 nid=0x79c in Object.wait() [0x5f62f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x193096b0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x193096b0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-669" daemon prio=6 tid=0x56dc6800 nid=0x12ec in Object.wait() [0x6307f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1930c270> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x1930c270> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:231)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(31)-210.127.33.16" daemon prio=6 tid=0x56dc9000 nid=0x3b0 runnable [0x6319f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+	- locked <0x4bc67f18> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:66)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- <0x198252a0> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"16:ZACH:20150324-727" daemon prio=6 tid=0x586fd800 nid=0x1078 waiting for monitor entry [0x5e5cf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:72)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[ACTIVE] ExecuteThread: '43' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x586fd400 nid=0x318 in Object.wait() [0x5e53f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184a3888> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184a3888> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '42' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x586fcc00 nid=0x668 in Object.wait() [0x5e4af000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184a4480> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184a4480> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-739" daemon prio=6 tid=0x586fc800 nid=0x5b0 waiting for monitor entry [0x5e41f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:623)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-729" daemon prio=6 tid=0x586fc000 nid=0x12d8 waiting for monitor entry [0x5e38f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:72)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-695" daemon prio=6 tid=0x586fbc00 nid=0xafc waiting for monitor entry [0x5e2ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.EngineLog.info(EngineLog.java:64)
+	at com.cni.fw.net.sap.SapConnector.executeParam(SapConnector.java:789)
+	at com.cni.fw.net.sap.SapConnection.selectParam(SapConnection.java:66)
+	at pms.common.COUNTR09AC.process(COUNTR09AC.java:49)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SapTxService.executeSingleTx(SapTxService.java:34)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-706" daemon prio=6 tid=0x586fb400 nid=0x45c waiting for monitor entry [0x5e26f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:41)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '37' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x586fac00 nid=0x5dc in Object.wait() [0x5e1df000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184ad0e8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184ad0e8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-646" daemon prio=6 tid=0x586fa800 nid=0x60c in Object.wait() [0x5e14f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184aeca8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184aeca8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-705" daemon prio=6 tid=0x586fa000 nid=0x524 waiting for monitor entry [0x5e0bf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-685" daemon prio=6 tid=0x5b7fcc00 nid=0xf38 runnable [0x5e02e000]
+   java.lang.Thread.State: RUNNABLE
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:282)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:105)
+	- locked <0x16f95cf0> (a java.io.BufferedOutputStream)
+	at java.io.PrintStream.write(PrintStream.java:430)
+	- locked <0x16f95cd0> (a java.io.PrintStream)
+	at sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:202)
+	at sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:263)
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:106)
+	- locked <0x178f58f0> (a java.io.OutputStreamWriter)
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:116)
+	at java.io.OutputStreamWriter.write(OutputStreamWriter.java:203)
+	at java.io.Writer.write(Writer.java:140)
+	at org.apache.log4j.helpers.QuietWriter.write(QuietWriter.java:47)
+	at org.apache.log4j.WriterAppender.subAppend(WriterAppender.java:301)
+	at org.apache.log4j.WriterAppender.append(WriterAppender.java:159)
+	at org.apache.log4j.AppenderSkeleton.doAppend(AppenderSkeleton.java:230)
+	- locked <0x178f51b0> (a org.apache.log4j.ConsoleAppender)
+	at org.apache.log4j.helpers.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:65)
+	at org.apache.log4j.Category.callAppenders(Category.java:203)
+	- locked <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR09AC.process(COUNTR09AC.java:52)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SapTxService.executeSingleTx(SapTxService.java:34)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-626" daemon prio=6 tid=0x5b7fc400 nid=0x125c in Object.wait() [0x5df9f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184b1460> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184b1460> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-731" daemon prio=6 tid=0x5b7fc000 nid=0x874 waiting for monitor entry [0x5df0f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:42)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-690" daemon prio=6 tid=0x58a33800 nid=0x1338 waiting for monitor entry [0x5cebf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR02AC.process(COUNTR02AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-721" daemon prio=6 tid=0x5b7fb800 nid=0x13c8 waiting for monitor entry [0x5de7f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:42)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-711" daemon prio=6 tid=0x5b7fb000 nid=0x13c4 waiting for monitor entry [0x5ddef000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-730" daemon prio=6 tid=0x5b7fac00 nid=0x4c8 waiting for monitor entry [0x5dd5f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:42)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '27' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5b7fa400 nid=0x113c in Object.wait() [0x5dccf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184bc960> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184bc960> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-734" daemon prio=6 tid=0x5b7fa000 nid=0x114c waiting for monitor entry [0x5dc3f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:42)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '25' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x5b7f9800 nid=0x810 in Object.wait() [0x5dbaf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184c08c0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184c08c0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-732" daemon prio=6 tid=0x5b7f9400 nid=0x11e8 waiting for monitor entry [0x5db1f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-664" daemon prio=6 tid=0x588c6c00 nid=0x11dc waiting for monitor entry [0x5da8f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-724" daemon prio=6 tid=0x588c6400 nid=0x11f0 waiting for monitor entry [0x5d9ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:41)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '21' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x588c6000 nid=0xdb8 in Object.wait() [0x5d96f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184c6970> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184c6970> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-691" daemon prio=6 tid=0x588c5800 nid=0x1358 waiting for monitor entry [0x5d72f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR09AC.process(COUNTR09AC.java:52)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SapTxService.executeSingleTx(SapTxService.java:34)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-692" daemon prio=6 tid=0x588c5000 nid=0xc24 in Object.wait() [0x5d69f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184c9868> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184c9868> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-738" daemon prio=6 tid=0x588c4c00 nid=0x368 waiting for monitor entry [0x5d60f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:72)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-740" daemon prio=6 tid=0x588c4400 nid=0x120c waiting for monitor entry [0x5d57f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:623)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-735" daemon prio=6 tid=0x588c4000 nid=0x1218 waiting for monitor entry [0x5d4ef000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:623)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-741" daemon prio=6 tid=0x588c3800 nid=0xe3c waiting for monitor entry [0x5d45f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:42)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-726" daemon prio=6 tid=0x588c3400 nid=0x6cc waiting for monitor entry [0x5d3cf000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-674" daemon prio=6 tid=0x58a36c00 nid=0x10f8 waiting for monitor entry [0x5d33f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '12' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x58a36400 nid=0x1114 in Object.wait() [0x5d2af000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184e13b0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184e13b0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-689" daemon prio=6 tid=0x58a36000 nid=0x660 waiting for monitor entry [0x5d21f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-725" daemon prio=6 tid=0x58a35800 nid=0x8c0 waiting for monitor entry [0x5d18f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-700" daemon prio=6 tid=0x58a35400 nid=0x5f8 waiting for monitor entry [0x5d0ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-723" daemon prio=6 tid=0x58a34c00 nid=0x7c4 waiting for monitor entry [0x5d06f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:68)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(24)-210.127.33.16" daemon prio=6 tid=0x58a34000 nid=0xa18 in Object.wait() [0x5cf4f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x17d44250> (a com.sun.jmx.remote.internal.ArrayNotificationBuffer)
+	at com.sun.jmx.remote.internal.ArrayNotificationBuffer.fetchNotifications(ArrayNotificationBuffer.java:417)
+	- locked <0x17d44250> (a com.sun.jmx.remote.internal.ArrayNotificationBuffer)
+	at com.sun.jmx.remote.internal.ArrayNotificationBuffer$ShareBuffer.fetchNotifications(ArrayNotificationBuffer.java:209)
+	at com.sun.jmx.remote.internal.ServerNotifForwarder.fetchNotifs(ServerNotifForwarder.java:258)
+	at javax.management.remote.rmi.RMIConnectionImpl$2.run(RMIConnectionImpl.java:1227)
+	at javax.management.remote.rmi.RMIConnectionImpl$2.run(RMIConnectionImpl.java:1225)
+	at javax.management.remote.rmi.RMIConnectionImpl.fetchNotifications(RMIConnectionImpl.java:1231)
+	at sun.reflect.GeneratedMethodAccessor171.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:303)
+	at sun.rmi.transport.Transport$1.run(Transport.java:159)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:155)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:535)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- <0x1839dd00> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"JMX server connection timeout 53" daemon prio=6 tid=0x58b1cc00 nid=0x508 in Object.wait() [0x5cd9f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x183955a8> (a [I)
+	at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:150)
+	- locked <0x183955a8> (a [I)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"JMX server connection timeout 51" daemon prio=6 tid=0x58b1c000 nid=0x528 in Object.wait() [0x5cc7f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x18394ba0> (a [I)
+	at com.sun.jmx.remote.internal.ServerCommunicatorAdmin$Timeout.run(ServerCommunicatorAdmin.java:150)
+	- locked <0x18394ba0> (a [I)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI Scheduler(0)" daemon prio=6 tid=0x58b1b800 nid=0x135c waiting on condition [0x5cbef000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x18474818> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:196)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2025)
+	at java.util.concurrent.DelayQueue.take(DelayQueue.java:164)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:609)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:602)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:947)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:907)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"RMI TCP Connection(26)-210.127.33.16" daemon prio=6 tid=0x58b1b000 nid=0x548 runnable [0x5cb5f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+	- locked <0x1a7b8eb8> (a java.io.BufferedInputStream)
+	at java.io.FilterInputStream.read(FilterInputStream.java:66)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:517)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:790)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:649)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- <0x183ac508> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"RMI TCP Accept-0" daemon prio=6 tid=0x58b1ac00 nid=0x638 runnable [0x5cacf000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x182e1e38> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:34)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:369)
+	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:341)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-728" daemon prio=6 tid=0x58b1a400 nid=0x664 waiting for monitor entry [0x5c91f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:42)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x58b1a000 nid=0x52c in Object.wait() [0x5ca3f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184ed0e0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184ed0e0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x58b19800 nid=0x530 in Object.wait() [0x5c9af000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184ef0e0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184ef0e0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"DynamicListenThread[Default[2]]" daemon prio=10 tid=0x587b7000 nid=0x13bc runnable [0x5b79f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x18483df8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:38)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:535)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:417)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:173)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"DynamicListenThread[Default[4]]" daemon prio=10 tid=0x587b6800 nid=0x13b8 runnable [0x5b70f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x18483d28> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:38)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:535)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:417)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:173)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"DynamicListenThread[Default[5]]" daemon prio=10 tid=0x587b6000 nid=0x13b4 runnable [0x5b67f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x18483c58> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:38)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:535)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:417)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:173)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"DynamicListenThread[Default]" daemon prio=10 tid=0x587b5c00 nid=0x13b0 runnable [0x5b5ef000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x1848c230> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:41)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:537)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:417)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:173)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"DynamicListenThread[Default[1]]" daemon prio=10 tid=0x587b5400 nid=0x13ac runnable [0x5b55f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x18483ab8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:38)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:535)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:417)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:173)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"DynamicListenThread[Default[6]]" daemon prio=10 tid=0x587b5000 nid=0x13a8 runnable [0x5b4cf000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x184839e8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:38)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:535)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:417)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:173)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"DynamicListenThread[Default[3]]" daemon prio=10 tid=0x587b4800 nid=0x13a4 runnable [0x5b43f000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:408)
+	- locked <0x18483b88> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:462)
+	at java.net.ServerSocket.accept(ServerSocket.java:430)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:38)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:535)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:417)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:173)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x587b3c00 nid=0x13a0 in Object.wait() [0x5b3af000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x184f10e0> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x184f10e0> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"weblogic.GCMonitor" daemon prio=6 tid=0x587b3000 nid=0x1394 in Object.wait() [0x5b31f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x17bced20> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	- locked <0x17bced20> (a java.lang.ref.ReferenceQueue$Lock)
+	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-14" prio=6 tid=0x587b2800 nid=0x1390 waiting on condition [0x5b28f000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x176c15c8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:676)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:751)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=6 tid=0x587b2400 nid=0x138c in Object.wait() [0x5b12f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x17a1dd38> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:205)
+	- locked <0x17a1dd38> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:226)
+
+   Locked ownable synchronizers:
+	- None
+
+"JCO.TimeoutChecker" daemon prio=6 tid=0x587b1c00 nid=0x137c in Object.wait() [0x5aa5f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x17bcf430> (a com.sap.mw.jco.util.ObjectList)
+	at com.sap.mw.jco.JCO$PoolManager$TimeoutChecker.run(JCO.java:5586)
+	- locked <0x17bcf430> (a com.sap.mw.jco.util.ObjectList)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-722" daemon prio=6 tid=0x587b1800 nid=0x12fc waiting for monitor entry [0x5a05f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:781)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"Timer-3" daemon prio=6 tid=0x587b0800 nid=0x110c in Object.wait() [0x59f3f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x179c04d0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x179c04d0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-11" prio=6 tid=0x587afc00 nid=0x1104 waiting on condition [0x59eaf000]
+   java.lang.Thread.State: WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x178cb338> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:156)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1987)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:399)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:676)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:751)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"DoSManager" daemon prio=6 tid=0x587b0400 nid=0x10ec waiting on condition [0x59bdf000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at com.octetstring.vde.DoSManager.run(DoSManager.java:433)
+
+   Locked ownable synchronizers:
+	- None
+
+"VDE Transaction Processor Thread" daemon prio=2 tid=0x587af800 nid=0x10e4 in Object.wait() [0x59abf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1765c4e8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at java.lang.Object.wait(Object.java:485)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+	- locked <0x1765c4e8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+
+   Locked ownable synchronizers:
+	- None
+
+"ExecuteThread: '3' for queue: 'weblogic.socket.Muxer'" daemon prio=6 tid=0x57a6f000 nid=0x10d4 runnable [0x59a2f000]
+   java.lang.Thread.State: RUNNABLE
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+   Locked ownable synchronizers:
+	- None
+
+"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" daemon prio=6 tid=0x56fe1c00 nid=0x10d0 runnable [0x5999f000]
+   java.lang.Thread.State: RUNNABLE
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+   Locked ownable synchronizers:
+	- None
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=6 tid=0x56fe1400 nid=0x10cc runnable [0x5990f000]
+   java.lang.Thread.State: RUNNABLE
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+   Locked ownable synchronizers:
+	- None
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=6 tid=0x57ab5000 nid=0x10c8 runnable [0x5987f000]
+   java.lang.Thread.State: RUNNABLE
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-717" daemon prio=6 tid=0x56c6f000 nid=0x10c4 waiting for monitor entry [0x591ef000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR08AC.process(COUNTR08AC.java:40)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"Timer-2" daemon prio=6 tid=0x580b8400 nid=0x10b4 in Object.wait() [0x5915f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x16f8f2c8> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x16f8f2c8> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+   Locked ownable synchronizers:
+	- None
+
+"weblogic.timers.TimerThread" daemon prio=10 tid=0x56b1ec00 nid=0x10b0 in Object.wait() [0x590cf000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x16a6a3a0> (a weblogic.timers.internal.TimerThread)
+	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:262)
+	- locked <0x16a6a3a0> (a weblogic.timers.internal.TimerThread)
+
+   Locked ownable synchronizers:
+	- None
+
+"weblogic.time.TimeEventGenerator" daemon prio=10 tid=0x56d9bc00 nid=0x10ac in Object.wait() [0x5805f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x17b98a08> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+	- locked <0x17b98a08> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+	at java.lang.Thread.run(Thread.java:662)
+
+   Locked ownable synchronizers:
+	- None
+
+"16:ZACH:20150324-714" daemon prio=6 tid=0x580f5000 nid=0x10a8 waiting for monitor entry [0x57d8f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.log4j.Category.callAppenders(Category.java:201)
+	- waiting to lock <0x178d92d8> (a org.apache.log4j.spi.RootLogger)
+	at org.apache.log4j.Category.forcedLog(Category.java:388)
+	at org.apache.log4j.Category.info(Category.java:663)
+	at com.cni.fw.ff.log.CommonLog.info(CommonLog.java:172)
+	at com.cni.fw.db.cdq.sdbc.query.SQuery.doQuery(SQuery.java:378)
+	at com.cni.fw.db.cdq.tactics.query.Tactics.select(Tactics.java:367)
+	at pms.common.COUNTR07AC.process(COUNTR07AC.java:42)
+	at com.cni.fw.arch.smb.ac.NormalTxService.executeSingleTx(NormalTxService.java:73)
+	at com.cni.fw.arch.smb.ac.SharedTxService.execute(SharedTxService.java:27)
+	at com.cni.fw.web.fmb.tm.TransactionManagement.execute(TransactionManagement.java:86)
+	at com.cni.fw.web.core.WebFrameManager.execute(WebFrameManager.java:676)
+	at com.cni.fw.web.core.WebFrameWorker.execute(WebFrameWorker.java:139)
+	at com.cni.fw.web.was.ServiceGate.doProcess(ServiceGate.java:93)
+	at com.cni.fw.web.was.ServiceGate.doPost(ServiceGate.java:78)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:227)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:125)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:301)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:184)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3732)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3696)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2273)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2179)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1490)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"Timer-1" daemon prio=6 tid=0x583b3000 nid=0x10a4 in Object.wait() [0x57cff000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x17bcb710> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x17bcb710> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+   Locked ownable synchronizers:
+	- None
+
+"Timer-0" daemon prio=6 tid=0x56e53c00 nid=0x1070 in Object.wait() [0x57c0f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x17bcbb20> (a java.util.TaskQueue)
+	at java.lang.Object.wait(Object.java:485)
+	at java.util.TimerThread.mainLoop(Timer.java:483)
+	- locked <0x17bcbb20> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+   Locked ownable synchronizers:
+	- None
+
+"Low Memory Detector" daemon prio=6 tid=0x559f6800 nid=0xa30 runnable [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread1" daemon prio=10 tid=0x559f5800 nid=0xd94 waiting on condition [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" daemon prio=10 tid=0x559cd000 nid=0x110 waiting on condition [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" daemon prio=10 tid=0x559c9c00 nid=0xe20 waiting on condition [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" daemon prio=10 tid=0x559c1400 nid=0x570 runnable [0x00000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" daemon prio=8 tid=0x00528c00 nid=0xdac in Object.wait() [0x559bf000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x164b2fb8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	- locked <0x164b2fb8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" daemon prio=10 tid=0x00524800 nid=0xd8c in Object.wait() [0x5592f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x164b2f70> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x164b2f70> (a java.lang.ref.Reference$Lock)
+
+   Locked ownable synchronizers:
+	- None
+
+"main" prio=6 tid=0x0076c800 nid=0xce4 in Object.wait() [0x003ff000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x1631e850> (a weblogic.t3.srvr.T3Srvr)
+	at java.lang.Object.wait(Object.java:485)
+	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:981)
+	- locked <0x1631e850> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:490)
+	at weblogic.Server.main(Server.java:71)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" prio=10 tid=0x00521000 nid=0xc2c runnable 
+
+"GC task thread#0 (ParallelGC)" prio=6 tid=0x00454000 nid=0x278 runnable 
+
+"GC task thread#1 (ParallelGC)" prio=6 tid=0x00455000 nid=0xda8 runnable 
+
+"GC task thread#2 (ParallelGC)" prio=6 tid=0x00456400 nid=0x684 runnable 
+
+"GC task thread#3 (ParallelGC)" prio=6 tid=0x00457800 nid=0xd88 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x559fec00 nid=0x8d0 waiting on condition 
+
+JNI global references: 118461
+

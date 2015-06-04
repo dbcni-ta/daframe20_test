@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+input, select,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: "10pt";
+	font-family: "맑은 고딕";
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: inherit;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+A:link {
+	font-family: "돋움"; font-size: 9pt; color: #145270; TEXT-DECORATION: none
+}
+A:active {
+	font-family: "돋움"; font-size: 9pt; color: #333333; TEXT-DECORATION: none
+}
+A:visited {
+	font-family: "돋움"; font-size: 9pt; color: #6666666; TEXT-DECORATION: none
+}
+A:hover {
+	font-family: "돋움"; font-size: 9pt; color:: #5B5B5B; TEXT-DECORATION: underline
+}
+

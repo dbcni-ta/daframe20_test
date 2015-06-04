@@ -1,0 +1,15 @@
+INSERT INTO EX_NATION 
+(
+    CODE, 
+    NAME, 
+    CONTINENT, 
+    CAPITAL
+) 
+VALUES
+(
+    $input.CODE, 
+    $input.NAME, 
+    $input.CONTINENT, 
+    $input.CAPITAL
+)
+

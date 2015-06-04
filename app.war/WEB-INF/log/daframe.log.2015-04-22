@@ -1,0 +1,63 @@
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] 
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] [LogManager] *LOADED*
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] ■■■■■■■■■■■■ CNI Framework [WEB] ServiceStarter INITIALIZE ■■■■■■■■■■■■
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] [MessageRepository] *LOADED*
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] ■■■■■■■■■■■■ * Framework Ver. : 2.0.21 (Copyright 2007-2015 by Dongbu CNI All Rights Reserved)
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] ■■■■■■■■■■■■ * Framework HOME : D:/projects/daframe/workspace/daframe20_test/app.war/
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] ■■■■■■■■■■■■ * Context Name   : null
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.515][Engine] ■■■■■■■■■■■■ * Log Level      : DEBUG
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.530][WebFrameManager] *LICENSE* 라이센스를 확인합니다.
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.530][WebFrameManager] *LICENSE* 제약 IP : [unlimit]
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.530][WebFrameManager] *LICENSE* 동시사용자 제약 : [10]
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.530][WebFrameManager] *LICENSE* 만기일 제약 : [unlimit] *TODAY:20150422*
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.530][WebFrameManager] *LICENSE* 라이센스 확인을 완료 : [Serial# : DBCNI-DAF001-200801-WINTER-MUTE]
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.530][ConnectionPoolManager] [내장커낵션] 커낵션 풀을 사용하지 않습니다. (기반데이타베이스 설정:datasource)
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.546][Engine] Tactics를 초기화합니다. [Tactics 쿼리파일 홈디렉토리:WEB-INF/tsql]
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] FMB Group 생성 시작 [WebFrame Type, JMX:false]
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] FMB #1-CP : com.cni.fw.web.fmb.cp.CommandProcess
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][Engine] [CustomClassLoader] *RELOADED*
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] [PARAM] <CMD_NULL:NO_CMD>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] [PARAM] <CMD_NOFOUND:NO_CMD>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] FMB #2-SP : com.cni.fw.web.fmb.sm.RepositoryBasedSessionProcess
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] [PARAM] <SESSION_NOFOUND:NO_SESSION>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] [PARAM] <SESSION_PEPOSITORY_CLASS:com.cni.fw.web.session.repository.SimpleSessionRepository>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.686][WebFrameManager] FMB #3-IP : com.cni.fw.web.fmb.iop.InputProcess
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <X:>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <WEB:com.cni.fw.made.web.cc.ip.IPW001CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <AJAX:com.cni.fw.made.web.cc.ip.IPA001CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <WEB-CHK-ADM:com.cni.fw.made.web.cc.ip.IPW002CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <WEB-CHK-DUP:com.cni.fw.made.web.cc.ip.IPW003CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <FILE:com.cni.fw.made.web.cc.ip.IPF001CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <FILE-AJAX:com.cni.fw.made.web.cc.ip.IPA002CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <XML:com.cni.fw.made.web.cc.ip.IPX001CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <WEB-LTO:com.cni.fw.mci.web.IpWebLtoType01CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <AJAX-LTO:com.cni.fw.mci.web.IpAjaxLtoType01CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <WISE:com.daframe.mci.cc.ip.IPWISE003CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] FMB #4-TM : com.cni.fw.web.fmb.tm.TransactionManagement
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <INPUT-LOG:true>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <Redirect:SKIP>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <Page:SKIP>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <NA:com.cni.fw.arch.smb.ac.BasicService>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <Tx:com.cni.fw.arch.smb.ac.NormalTxService>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <Tx2:com.cni.fw.arch.smb.ac.ThreadSafeTxService>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <SAP:com.cni.fw.arch.smb.ac.SapTxService>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] FMB #5-SM : com.cni.fw.web.fmb.sm.RepositoryBasedSessionManagement
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <SESSION_NOFOUND:NO_SESSION>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <SESSION_PEPOSITORY_CLASS:com.cni.fw.web.session.repository.SimpleSessionRepository>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] FMB #6-OP : com.cni.fw.web.fmb.iop.OutputProcess
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <X:>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <SECOND-COMMAND:TM>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <CHAINED:TM>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <CHAINED-TX:TM>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <BRANCH:TM>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <BRANCH-TX:TM>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <JSP:com.cni.fw.made.web.cc.op.OPW001CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <XML:com.cni.fw.mci.OpXmlType01CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <JSON:com.cni.fw.mci.OpJsonType01CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <FILE:com.cni.fw.made.web.cc.op.OPF001CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <EXCEL:com.cni.fw.made.web.cc.op.OPXLS001CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] [PARAM] <WISE:com.daframe.mci.cc.op.OPWISE003CC>
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] FMB #7-PP : com.cni.fw.web.fmb.pp.PageProcess
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][WebFrameManager] FMB Group 생성 완료 [WebFrame Type, Size:7]
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],19:32:46.702][Engine] ■■■■■■■■■■■■ CNI Framework [WEB] ServiceStarter COMPLETE ! ■■■■■■■■■■■■
+^[ContainerBackgroundProcessor[StandardEngine[Catalina]],20:01:22.559][Engine] [Session Watcher] Logout! <78217625840B0050CDE7B770444C4C32>

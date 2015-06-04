@@ -1,0 +1,9 @@
+#*
+
+비조회형 SP 쿼리 테스트.
+
+*#
+
+$sp.setProcedure("call p_test(?, ?)")
+$sp.setParam(1,"DOUBLE", "param01")
+$sp.setResult(2, "DOUBLE", "result01")

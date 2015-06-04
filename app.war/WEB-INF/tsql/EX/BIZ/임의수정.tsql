@@ -1,0 +1,27 @@
+#* 
+	일반적인 수정 쿼리 테스트.
+*#
+
+
+#if ($system.dbName == "SQLServer") 
+
+UPDATE EX_BIZ_INFO 
+SET age = $input.age, reg_dt=getDate()
+WHERE
+id = $input.id
+
+#elseif ($system.dbName == "Oracle" || $system.dbName == "Cubrid" || $system.dbName == "Tibero" || $system.dbName == "Altibase") 
+
+UPDATE EX_BIZ_INFO 
+SET age = $input.age, reg_dt=sysdate
+WHERE
+id = $input.id
+
+#elseif ($system.dbName == "MySQL" || $system.dbName == "PostgreSQL") 
+
+UPDATE EX_BIZ_INFO 
+SET age = $input.age, reg_dt=Now()
+WHERE
+id = $input.id
+
+#end

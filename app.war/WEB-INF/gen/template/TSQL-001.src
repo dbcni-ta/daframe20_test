@@ -1,0 +1,81 @@
+#if ($tableName != "TSQL-TEMP-QUERY")
+#set($tot = $colArray.size())
+-------------------------------------------
+
+INSERT INTO $tableName 
+(
+#set($cnt = 0)
+#foreach( $column in $colArray )#set($cnt = $cnt+1)    $column#if ($cnt != $tot), 
+#end#end
+
+) 
+VALUES
+(
+#set($cnt = 0)
+#foreach( $column in $colArray )#set($cnt = $cnt+1)    $input.$column#if ($cnt != $tot), 
+#end#end
+
+)
+
+-------------------------------------------
+
+UPDATE $tableName
+SET 
+#set($cnt = 0)
+#foreach( $column in $colArray )#set($cnt = $cnt+1)    $column = $input.$column#if ($cnt != $tot), 
+#end#end
+
+WHERE  
+#set($cnt = 0)
+#foreach( $column in $colArray )
+#set($cnt = $cnt+1)    $column = $input.$column #if ($cnt != $tot)AND 
+#end
+#end
+
+
+-------------------------------------------
+
+DELETE FROM $tableName
+WHERE  
+#set($cnt = 0)
+#foreach( $column in $colArray )
+#set($cnt = $cnt+1)    $column = $input.$column #if ($cnt != $tot)AND 
+#end
+#end
+
+
+-------------------------------------------
+
+SELECT 
+#set($cnt = 0)
+#foreach( $column in $colArray )#set($cnt = $cnt+1)    $column#if ($cnt != $tot), 
+#end#end
+
+FROM 
+    $tableName
+WHERE  
+#set($cnt = 0)
+#foreach( $column in $colArray )
+#set($cnt = $cnt+1)    $column = $input.$column #if ($cnt != $tot)AND 
+#end
+#end
+
+
+===========================================#end
+
+*for Java (AC, JSP)*
+
+#set($cnt = 0)
+#foreach( $column in $colArray )#set($cnt = $cnt+1)mto.put("$column", input.get("$column"));
+#end
+
+#set($cnt = 0)
+#foreach( $column in $colArray )#set($cnt = $cnt+1)mto.get("$column");
+#end
+
+#set($cnt = 0)
+#foreach( $column in $colArray )#set($cnt = $cnt+1)mto.put("$column", );
+#end
+
+
+

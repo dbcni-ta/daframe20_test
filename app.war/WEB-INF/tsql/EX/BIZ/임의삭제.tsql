@@ -1,0 +1,6 @@
+#* 
+	일반적인 삭제 쿼리 테스트.
+ *#
+
+DELETE FROM EX_BIZ_INFO 
+WHERE memo = $input.memo

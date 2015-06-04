@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+  <project name="Meta Transformer" default="run"  basedir="..">
+
+    <target name="run" >
+      <input message="동작옵션 [e:export / i:import]" validargs="e,i" addproperty="option"/>
+      <java classname="com.cni.fw.ui.console.meta.cmd.MetaTransformer" fork="true">
+	      	<classpath>
+  		      <fileset dir="WEB-INF/lib">
+  		        <include name="**/*.jar"/>
+  		      </fileset>
+	      	</classpath>
+      		<jvmarg value="-DCNI.HOME=."/>
+      		<arg value="-${option}" />
+      </java>
+    </target>
+  	
+  </project>
+

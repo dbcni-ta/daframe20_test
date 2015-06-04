@@ -1,0 +1,12 @@
+#*
+
+조회형 SP 쿼리 테스트 (본 예제는 오라클 전용임)
+	/
+
+$sp.setProcedure("begin ? := p_cur_test; end;") // 오라클 PL/SQL 전용.
+$sp.setProcedure("{ ? = call p_cur_test() }") // 참고로 이건 안된다.
+*#
+
+
+$sp.setProcedure("begin ? := p_cur_test; end;")
+$sp.setResult(1, "CUSTOM", "result01")

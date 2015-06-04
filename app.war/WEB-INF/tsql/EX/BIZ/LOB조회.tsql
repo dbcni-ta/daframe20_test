@@ -1,0 +1,6 @@
+#* 
+
+  LOB 데이타 테스트용 쿼리.
+
+ *#
+SELECT * FROM EX_BIZ_LOB 

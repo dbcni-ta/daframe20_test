@@ -1,0 +1,62 @@
+^[localhost-startStop-1,18:24:28.615][Engine] 
+^[localhost-startStop-1,18:24:28.616][Engine] [LogManager] *LOADED*
+^[localhost-startStop-1,18:24:28.616][Engine] ■■■■■■■■■■■■ CNI Framework [WEB] ServiceStarter INITIALIZE ■■■■■■■■■■■■
+^[localhost-startStop-1,18:24:28.618][Engine] [MessageRepository] *LOADED*
+^[localhost-startStop-1,18:24:28.620][Engine] ■■■■■■■■■■■■ * Framework Ver. : 2.0.21 (Copyright 2007-2015 by Dongbu CNI All Rights Reserved)
+^[localhost-startStop-1,18:24:28.620][Engine] ■■■■■■■■■■■■ * Framework HOME : D:/projects/daframe/workspace/daframe20_test/app.war/
+^[localhost-startStop-1,18:24:28.620][Engine] ■■■■■■■■■■■■ * Context Name   : null
+^[localhost-startStop-1,18:24:28.620][Engine] ■■■■■■■■■■■■ * Log Level      : DEBUG
+^[localhost-startStop-1,18:24:28.624][WebFrameManager] *LICENSE* 라이센스를 확인합니다.
+^[localhost-startStop-1,18:24:28.635][WebFrameManager] *LICENSE* 제약 IP : [unlimit]
+^[localhost-startStop-1,18:24:28.636][WebFrameManager] *LICENSE* 동시사용자 제약 : [10]
+^[localhost-startStop-1,18:24:28.638][WebFrameManager] *LICENSE* 만기일 제약 : [unlimit] *TODAY:20150303*
+^[localhost-startStop-1,18:24:28.639][WebFrameManager] *LICENSE* 라이센스 확인을 완료 : [Serial# : DBCNI-DAF001-200801-WINTER-MUTE]
+^[localhost-startStop-1,18:24:28.640][ConnectionPoolManager] [내장커낵션] 커낵션 풀을 사용하지 않습니다. (기반데이타베이스 설정:datasource)
+^[localhost-startStop-1,18:24:28.648][Engine] Tactics를 초기화합니다. [Tactics 쿼리파일 홈디렉토리:WEB-INF/tsql]
+^[localhost-startStop-1,18:24:29.075][WebFrameManager] FMB Group 생성 시작 [WebFrame Type, JMX:false]
+^[localhost-startStop-1,18:24:29.075][WebFrameManager] FMB #1-CP : com.cni.fw.web.fmb.cp.CommandProcess
+^[localhost-startStop-1,18:24:29.077][Engine] [CustomClassLoader] *RELOADED*
+^[localhost-startStop-1,18:24:29.082][WebFrameManager] [PARAM] <CMD_NULL:NO_CMD>
+^[localhost-startStop-1,18:24:29.082][WebFrameManager] [PARAM] <CMD_NOFOUND:NO_CMD>
+^[localhost-startStop-1,18:24:29.084][WebFrameManager] FMB #2-SP : com.cni.fw.web.fmb.sm.RepositoryBasedSessionProcess
+^[localhost-startStop-1,18:24:29.085][WebFrameManager] [PARAM] <SESSION_NOFOUND:NO_SESSION>
+^[localhost-startStop-1,18:24:29.085][WebFrameManager] [PARAM] <SESSION_PEPOSITORY_CLASS:com.cni.fw.web.session.repository.SimpleSessionRepository>
+^[localhost-startStop-1,18:24:29.086][WebFrameManager] FMB #3-IP : com.cni.fw.web.fmb.iop.InputProcess
+^[localhost-startStop-1,18:24:29.087][WebFrameManager] [PARAM] <X:>
+^[localhost-startStop-1,18:24:29.087][WebFrameManager] [PARAM] <WEB:com.cni.fw.made.web.cc.ip.IPW001CC>
+^[localhost-startStop-1,18:24:29.087][WebFrameManager] [PARAM] <AJAX:com.cni.fw.made.web.cc.ip.IPA001CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <WEB-CHK-ADM:com.cni.fw.made.web.cc.ip.IPW002CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <WEB-CHK-DUP:com.cni.fw.made.web.cc.ip.IPW003CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <FILE:com.cni.fw.made.web.cc.ip.IPF001CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <FILE-AJAX:com.cni.fw.made.web.cc.ip.IPA002CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <XML:com.cni.fw.made.web.cc.ip.IPX001CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <WEB-LTO:com.cni.fw.mci.web.IpWebLtoType01CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <AJAX-LTO:com.cni.fw.mci.web.IpAjaxLtoType01CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] [PARAM] <WISE:com.daframe.mci.cc.ip.IPWISE003CC>
+^[localhost-startStop-1,18:24:29.088][WebFrameManager] FMB #4-TM : com.cni.fw.web.fmb.tm.TransactionManagement
+^[localhost-startStop-1,18:24:29.089][WebFrameManager] [PARAM] <INPUT-LOG:true>
+^[localhost-startStop-1,18:24:29.089][WebFrameManager] [PARAM] <Redirect:SKIP>
+^[localhost-startStop-1,18:24:29.089][WebFrameManager] [PARAM] <Page:SKIP>
+^[localhost-startStop-1,18:24:29.089][WebFrameManager] [PARAM] <NA:com.cni.fw.arch.smb.ac.BasicService>
+^[localhost-startStop-1,18:24:29.089][WebFrameManager] [PARAM] <Tx:com.cni.fw.arch.smb.ac.NormalTxService>
+^[localhost-startStop-1,18:24:29.089][WebFrameManager] [PARAM] <Tx2:com.cni.fw.arch.smb.ac.ThreadSafeTxService>
+^[localhost-startStop-1,18:24:29.090][WebFrameManager] [PARAM] <SAP:com.cni.fw.arch.smb.ac.SapTxService>
+^[localhost-startStop-1,18:24:29.090][WebFrameManager] FMB #5-SM : com.cni.fw.web.fmb.sm.RepositoryBasedSessionManagement
+^[localhost-startStop-1,18:24:29.091][WebFrameManager] [PARAM] <SESSION_NOFOUND:NO_SESSION>
+^[localhost-startStop-1,18:24:29.092][WebFrameManager] [PARAM] <SESSION_PEPOSITORY_CLASS:com.cni.fw.web.session.repository.SimpleSessionRepository>
+^[localhost-startStop-1,18:24:29.092][WebFrameManager] FMB #6-OP : com.cni.fw.web.fmb.iop.OutputProcess
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <X:>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <SECOND-COMMAND:TM>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <CHAINED:TM>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <CHAINED-TX:TM>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <BRANCH:TM>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <BRANCH-TX:TM>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <JSP:com.cni.fw.made.web.cc.op.OPW001CC>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <XML:com.cni.fw.mci.OpXmlType01CC>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <JSON:com.cni.fw.mci.OpJsonType01CC>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <FILE:com.cni.fw.made.web.cc.op.OPF001CC>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <EXCEL:com.cni.fw.made.web.cc.op.OPXLS001CC>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] [PARAM] <WISE:com.daframe.mci.cc.op.OPWISE003CC>
+^[localhost-startStop-1,18:24:29.094][WebFrameManager] FMB #7-PP : com.cni.fw.web.fmb.pp.PageProcess
+^[localhost-startStop-1,18:24:29.095][WebFrameManager] FMB Group 생성 완료 [WebFrame Type, Size:7]
+^[localhost-startStop-1,18:24:29.096][Engine] ■■■■■■■■■■■■ CNI Framework [WEB] ServiceStarter COMPLETE ! ■■■■■■■■■■■■

@@ -1,0 +1,24 @@
+#* 
+
+
+조회 테스트 쿼리.
+
+
+아래는 몇몇 참고용 쿼리들임. 
+
+YYYYMMDD HH(HH24) MI SS
+
+SELECT id, name, age, memo, to_char(reg_dt,'YYYY-MM-DD HH24:MI:SS') as reg_dt FROM EX_INFO
+WHERE NAME=$input.name
+$input.lPad("name","%")
+$input.rPad("name","%")
+
+##WHERE NAME like '%' || $input.name || '%'
+
+*#
+
+
+SELECT * FROM EX_BIZ_INFO
+WHERE NAME = $input.name
+
+

@@ -1,0 +1,27 @@
+#* 
+	일반적인 수정 쿼리 테스트.
+*#
+
+
+#if ($system.dbName == "SQLServer") 
+
+INSERT INTO EX_BIZ_INFO 
+(id, name, age, memo, reg_dt) 
+VALUES
+($input.id, $input.name, $input.age, $input.memo, getDate())
+
+#elseif ($system.dbName == "Oracle" || $system.dbName == "Cubrid" || $system.dbName == "Tibero" || $system.dbName == "Altibase") 
+
+INSERT INTO EX_BIZ_INFO 
+(id, name, age, memo, reg_dt) 
+VALUES
+($input.id, $input.name, $input.age, $input.memo, sysdate)
+
+#elseif ($system.dbName == "MySQL" || $system.dbName == "PostgreSQL") 
+
+INSERT INTO EX_BIZ_INFO 
+(id, name, age, memo, reg_dt) 
+VALUES
+($input.id, $input.name, $input.age, $input.memo, now())
+
+#end

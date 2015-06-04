@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+  <project name="AC Generator" default="run"  basedir="../..">
+  	
+    <target name="run" >
+      <java classname="com.cni.fw.ui.console.gen.ACGenerator" fork="true">
+	      	<classpath>
+  		      <fileset dir="WEB-INF/lib">
+  		        <include name="**/*.jar"/>
+  		      </fileset>
+	      	</classpath>
+      		<jvmarg value="-DCNI.HOME=./"/>
+      		<arg value="-g" />
+      </java>
+    </target>
+  	
+  </project>
+

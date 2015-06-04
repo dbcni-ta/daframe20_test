@@ -1,0 +1,9 @@
+#* 
+
+  LOB 데이타 테스트용 쿼리.
+
+ *#
+INSERT INTO EX_BIZ_LOB 
+(lob_key, lob_clob, lob_blob) 
+VALUES
+($input.lob_key, $input.lob_clob, $input.lob_blob)
