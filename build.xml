@@ -3,52 +3,18 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. -->
-<project basedir="." default="build" name="daframe20_test">
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="daframe20_test">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../eclipse-luna/"/>
-    <property name="daframe20_core.location" value="../daframe20_core"/>
-    <property name="daframe20_ext.location" value="../daframe20_ext"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.5"/>
     <property name="source" value="1.5"/>
-    <path id="daframe20_core.classpath">
-        <pathelement location="${daframe20_core.location}/classes"/>
-        <pathelement location="${daframe20_core.location}/lib/commons-cli-1.2.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/commons-email-1.1.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/commons-fileupload-1.2.2.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/commons-io-2.2.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/commons-lang-2.4.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/geronimo-jms_1.1_spec-1.1.1.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/geronimo-jsp_2.0_spec-1.1.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/geronimo-servlet_2.4_spec-1.1.1.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/ibatis-2.3.0.677.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/jaxb-api.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/jaxb-jsr173_1.0_api.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/log4j-1.2.17.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/poi-3.8-20120326.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/velocity-1.7.jar"/>
-        <pathelement location="${daframe20_core.location}/lib/sapjco_2.1.10.jar"/>
-    </path>
-    <path id="daframe20_ext.classpath">
-        <pathelement location="${daframe20_ext.location}/bin"/>
-        <path refid="daframe20_core.classpath"/>
-        <pathelement location="${daframe20_ext.location}/lib/commons-fileupload-1.2.2.jar"/>
-        <pathelement location="${daframe20_ext.location}/lib/gauce4017.jar"/>
-        <pathelement location="${daframe20_ext.location}/lib/geronimo-servlet_2.4_spec-1.1.1.jar"/>
-        <pathelement location="${daframe20_ext.location}/lib/json-simple-1.1.1.jar"/>
-        <pathelement location="${daframe20_ext.location}/lib/poi-3.8-20120326.jar"/>
-        <pathelement location="${daframe20_ext.location}/lib/xFormsXmlSaxLib.jar"/>
-    </path>
     <path id="daframe20_test.classpath">
         <pathelement location="app.war/WEB-INF/components"/>
         <pathelement location="app.war/WEB-INF/classes"/>
         <pathelement location="lib/geronimo-jsp_2.0_spec-1.1.jar"/>
         <pathelement location="lib/geronimo-servlet_2.4_spec-1.1.1.jar"/>
         <pathelement location="lib/wisegrid-xlib.jar"/>
-        <path refid="daframe20_core.classpath"/>
-        <path refid="daframe20_ext.classpath"/>
         <pathelement location="app.war/WEB-INF/lib/daframe-core.jar"/>
         <pathelement location="app.war/WEB-INF/lib/daframe-ext.jar"/>
     </path>
@@ -70,23 +36,9 @@
         <delete dir="app.war/WEB-INF/components"/>
         <delete dir="app.war/WEB-INF/classes"/>
     </target>
-    <target depends="clean" name="cleanall">
-        <ant antfile="build.xml" dir="${daframe20_core.location}" inheritAll="false" target="clean"/>
-        <ant antfile="build.xml" dir="${daframe20_ext.location}" inheritAll="false" target="clean"/>
-    </target>
+    <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects">
-        <ant antfile="build.xml" dir="${daframe20_core.location}" inheritAll="false" target="build-project">
-            <propertyset>
-                <propertyref name="build.compiler"/>
-            </propertyset>
-        </ant>
-        <ant antfile="build.xml" dir="${daframe20_ext.location}" inheritAll="false" target="build-project">
-            <propertyset>
-                <propertyref name="build.compiler"/>
-            </propertyset>
-        </ant>
-    </target>
+    <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="app.war/WEB-INF/components" includeantruntime="false" source="${source}" target="${target}">
