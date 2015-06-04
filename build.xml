@@ -41,11 +41,11 @@
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="app.war/WEB-INF/components" includeantruntime="false" source="${source}" target="${target}">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="app.war/WEB-INF/components" includeantruntime="false" source="${source}" target="${target}" encoding="UTF-8">
             <src path="src"/>
             <classpath refid="daframe20_test.classpath"/>
         </javac>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="app.war/WEB-INF/classes" includeantruntime="false" source="${source}" target="${target}">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="app.war/WEB-INF/classes" includeantruntime="false" source="${source}" target="${target}" encoding="UTF-8">
             <src path="src_shared"/>
             <classpath refid="daframe20_test.classpath"/>
         </javac>
