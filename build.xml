@@ -3,7 +3,9 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="daframe20_test">
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="daframe20_test">
+	<property file="build.properties" />
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../eclipse-luna/"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -63,5 +65,11 @@
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
+    </target>
+    <target name="make-war">
+    	<echo>[ANT BUILD TASK:: make-war:: make-war start]</echo>
+    	<war destfile="${was.deploy.dir}/${war.file}" webxml="C:/Users/DBCNI/.jenkins/workspace/DAFrame20_Test/app.war/WEB-INF/web.xml">
+    		<fileset dir="${was.deploy.dir}"></fileset>
+    	</war>
     </target>
 </project>
