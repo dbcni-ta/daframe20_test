@@ -69,7 +69,7 @@
     <target name="make-war">
     	<echo>[ANT BUILD TASK:: make-war:: make-war start]</echo>
     	<war destfile="${was.deploy.dir}/${war.file.name}" webxml="${build.target.dir}/WEB-INF/web.xml">
-    		<fileset dir="${build.target.dir}/app.war"></fileset>
+    		<fileset dir="${build.target.dir}"></fileset>
     	</war>
     </target>
 </project>
