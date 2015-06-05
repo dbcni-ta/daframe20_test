@@ -77,7 +77,7 @@
     </target>
     <target name="copy-war">
     	<echo>[Copy File(WAR) TASK:: copy-war:: copy-war start]</echo>
-    	<copy todir="${was.deploy.dir}">
+    	<copy todir="D:/installs/was/Tomcat 8.0">
     		<fileset dir="${build.target.dir}" includes="**/daframe20_test.war" />
     	</copy>
     </target>
