@@ -68,7 +68,7 @@
     </target>
     <target name="make-war">
     	<echo>[ANT BUILD TASK:: make-war:: make-war start]</echo>
-    	<war destfile="C:/Users/DBCNI/.jenkins/workspace/DAFrame20_Test/${war.file}" webxml="C:/Users/DBCNI/.jenkins/workspace/DAFrame20_Test/app.war/WEB-INF/web.xml">
+    	<war destfile="C:/Users/DBCNI/.jenkins/workspace/DAFrame20_Test/test.war" webxml="C:/Users/DBCNI/.jenkins/workspace/DAFrame20_Test/app.war/WEB-INF/web.xml">
     		<fileset dir="${was.deploy.dir}"></fileset>
     	</war>
     </target>
