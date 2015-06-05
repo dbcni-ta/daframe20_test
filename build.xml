@@ -68,8 +68,17 @@
     </target>
     <target name="make-war">
     	<echo>[ANT BUILD TASK:: make-war:: make-war start]</echo>
-    	<war destfile="${was.deploy.dir}/${war.file.name}" webxml="${build.target.dir}/WEB-INF/web.xml">
-    		<fileset dir="${build.target.dir}"></fileset>
+    	<!--
+    	<war destfile="${was.deploy.dir}/${war.file.name}" webxml="${build.target.dir}/app.war/WEB-INF/web.xml">
+    	-->
+    	<war destfile="${build.target.dir}/${war.file.name}" webxml="${build.target.dir}/app.war/WEB-INF/web.xml">
+    		<fileset dir="${build.target.dir}/app.war"></fileset>
     	</war>
+    </target>
+    <target name="copy-war">
+    	<echo>[Copy File(WAR) TASK:: copy-war:: copy-war start]</echo>
+    	<copy dir="${build.target.dir}">
+    		<fileset dir="${was.deploy.dir}" includes="**/*" />
+    	</copy>
     </target>
 </project>
