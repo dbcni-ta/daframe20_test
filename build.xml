@@ -77,8 +77,8 @@
     </target>
     <target name="copy-war">
     	<echo>[Copy File(WAR) TASK:: copy-war:: copy-war start]</echo>
-    	<copy dir="${build.target.dir}">
-    		<fileset dir="${was.deploy.dir}" includes="**/*" />
+    	<copy todir="${build.target.dir}">
+    		<fileset dir="${was.deploy.dir}" includes="**/*.war" />
     	</copy>
     </target>
 </project>
