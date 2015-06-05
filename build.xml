@@ -78,7 +78,7 @@
     <target name="copy-war">
     	<echo>[Copy File(WAR) TASK:: copy-war:: copy-war start]</echo>
     	<copy todir="${was.deploy.dir}">
-    		<fileset dir="${build.target.dir}" includes="**/*.war" />
+    		<fileset dir="${build.target.dir}" includes="**/daframe20_test.war" />
     	</copy>
     </target>
 </project>
