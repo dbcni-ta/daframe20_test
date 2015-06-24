@@ -1,0 +1,6 @@
+# Ignores files end of '.a'
+*.a
+# Ignores all files in 'build' directory
+build/
+# Ignores log files
+*.log
