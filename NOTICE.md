@@ -1,4 +1,4 @@
-DAFrame 2.X (Dongbu Inc) Project, download 'https://github.com/dbcni-ta/daframe20_test', opened sources in '/support/Source Open'
+DAFrame 2.X (Dongbu Inc) Project, download 'https://github.com/dbcni-ta/daframe20_test'.
 
 Use of license references
 
@@ -7,6 +7,8 @@ Use of license references
     Copyright Dongbu Inc. (http://http://daframe.dongbucni.co.kr/cms)
     - daframe-core.jar
     - dafraem-ext.jar
+    
+    Opened sources (/support/Source Open)
     
 2. Apache Project
      
