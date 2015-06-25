@@ -4,7 +4,7 @@ Use of license references
 
 1. DAFrame 2.0 (Core & Extension)
 
-    Copyright Dongbu Inc. (http://http://daframe.dongbucni.co.kr/cms)
+    Copyright Dongbu Inc.
     - daframe-core.jar
     - dafraem-ext.jar
     
