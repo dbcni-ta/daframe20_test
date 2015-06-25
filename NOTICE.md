@@ -1,6 +1,4 @@
-DAFrame 2.X (Dongbu Inc) Project
-Download 'https://github.com/dbcni-ta/daframe20_test'
-Sources opened in '/support/Source Open/daframe_jaxb.zip
+DAFrame 2.X (Dongbu Inc) Project, download 'https://github.com/dbcni-ta/daframe20_test', opened sources in '/support/Source Open'
 
 Use of license references
 
